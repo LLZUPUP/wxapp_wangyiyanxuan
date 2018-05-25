@@ -1,0 +1,223 @@
+<view class="container">
+  <view class="hd">
+      <view class="inputSearch">
+        <input  class="input" placeholder="搜索商品，共9803款好物" bindtap="entrySearch" disabled />
+      </view>
+      <swiper class="receive">
+        <swiper-item >
+          <navigator url="/pages/index/receive/receive" hover-class="none">
+            <image class="receive_img" src="/libs/images/index.jpg" mode="aspectFill"></image>
+          </navigator>
+        </swiper-item>
+      </swiper>
+  </view>
+  
+  <view class="server">
+    <view class="server_item">
+      <image class="header_icon" src="/libs/images/minlogo.png"></image>
+      <text>网易自营品牌</text>
+    </view>
+    <view class="server_item">
+      <image class="header_icon" src="/libs/images/minlogo.png"></image>
+      <text>30天无忧退货</text>
+    </view>
+    <view class="server_item">
+      <image class="header_icon" src="/libs/images/minlogo.png"></image>
+      <text>48小时快速退款</text>
+    </view>
+  </view>
+  <view class="fuli">
+    <navigator url="/pages/index/receive/receive" hover-class="none">
+      <image class="fuli_img" src="/libs/images/fuli.jpg" mode="aspectFill"/>
+    </navigator>
+  </view>
+  
+</view>
+<scroll-view class="bd">
+    <view class="lingquan">
+      <navigator url="/pages/index/receive/receive" hover-class="none">
+        <image class="lingquan_img" src="/libs/images/lingquan.jpg"/>
+      </navigator>
+      <navigator url="/pages/index/receive/receive" hover-class="none">
+        <image class="zhekou_img" src="/libs/images/zhekou.jpg"/>
+      </navigator>
+    </view>
+  <navigator url="/pages/index/receive/receive" hover-class="none">
+    <view class="countDown">
+        <view class="count-left">
+          <view class="title">严选限时购</view>
+          <view class="count-m">
+            <text class="hour">02</text>
+            <text class="colon">:</text>
+            <text class="mins">58</text>
+            <text class="colon">:</text>
+            <text class="secs">37</text>
+          </view>
+          <view class="next-title">
+            <text>下一场</text>
+            <text>18:00</text>
+            <text>开始</text>
+          </view>
+        </view>
+        <view class="count-right">
+          <image src="/libs/images/shuihu.jpg" mode="aspectFit"></image>
+        </view>
+    </view>
+  </navigator>
+  <view class="bd_list">
+      <view class="list_mode">
+          <view class="title">人气推荐</view>
+          <view class="mode_img">
+            <navigator url="/pages/index/receive/receive" hover-class="none">
+              <image class="mode_image" src="/libs/images/yashua.jpg" mode="aspectFit"/>
+            </navigator>
+          </view>
+          <view class="product-list">
+            <view class="product">
+              <navigator url="/pages/index/receive/receive" hover-class="none">
+                <view class="pdt-left">
+                    <image class="pdt-img" src="/libs/images/maozi.png"></image>
+                    <text class="pdt-name">带帽日式多功能颈枕</text>
+                    <text class="pdt-price">¥80.1</text>
+                </view>
+              </navigator>
+              <navigator url="/pages/index/receive/receive" hover-class="none">
+                <view class="pdt-right">
+                  <image class="pdt-img" src="/libs/images/maozi.png"></image>
+                  <text class="pdt-name">带帽日式多功能颈枕</text>
+                  <text class="pdt-price">¥80.1</text>
+              </view>
+            </navigator>
+          </view>
+            <view class="product">
+              <navigator url="/pages/index/receive/receive" hover-class="none">
+                <view class="pdt-left">
+                  <image class="pdt-img" src="/libs/images/maozi.png"></image>
+                  <text class="pdt-name">带帽日式多功能颈枕</text>
+                  <text class="pdt-price">¥80.1</text>
+              </view>
+              </navigator>
+              <navigator url="/pages/index/receive/receive" hover-class="none">
+                <view class="pdt-right">
+                    <image class="pdt-img" src="/libs/images/maozi.png"></image>
+                    <text class="pdt-name">带帽日式多功能颈枕</text>
+                    <text class="pdt-price">¥80.1</text>
+                </view>
+              </navigator>
+            </view>
+          <view class="product">
+              <navigator url="/pages/index/receive/receive" hover-class="none">
+                <view class="pdt-left">
+                    <image class="pdt-img" src="/libs/images/maozi.png"></image>
+                    <text class="pdt-name">带帽日式多功能颈枕</text>
+                    <text class="pdt-price">¥80.1</text>
+                </view>
+              </navigator>
+              <navigator url="/pages/index/receive/receive" hover-class="none">
+                <view class="pdt-right">
+                    <image class="pdt-img" src="/libs/images/maozi.png"></image>
+                    <text class="pdt-name">带帽日式多功能颈枕</text>
+                    <text class="pdt-price">¥80.1</text>
+                </view>
+              </navigator>
+            </view>
+          <view class="product">
+            <navigator url="/pages/index/receive/receive" hover-class="none">
+              <view class="pdt-left">
+                  <image class="pdt-img" src="/libs/images/maozi.png"></image>
+                  <text class="pdt-name">带帽日式多功能颈枕</text>
+                  <text class="pdt-price">¥80.1</text>
+              </view>
+            </navigator>
+            <navigator url="/pages/index/receive/receive" hover-class="none">
+              <view class="pdt-right">
+                  <image class="pdt-img" src="/libs/images/maozi.png"></image>
+                  <text class="pdt-name">带帽日式多功能颈枕</text>
+                  <text class="pdt-price">¥80.1</text>
+              </view>
+            </navigator>
+          </view>
+        </view>
+    </view>
+  </view>
+  <view class="look_more">查看更多<text class="cusp">></text></view>
+  <view class="bd_list">
+      <view class="list_mode">
+          <view class="title">新品推荐</view>
+          <view class="mode_img">
+            <navigator url="/pages/index/receive/receive" hover-class="none">
+              <image class="mode_image" src="/libs/images/xinpin.jpg" mode="aspectFit"/>
+            </navigator>
+          </view>
+          <view class="product-list">
+            <view class="product">
+              <navigator url="/pages/index/receive/receive" hover-class="none">
+                <view class="pdt-left">
+                    <image class="pdt-img" src="/libs/images/yanjing.png"></image>
+                    <text class="pdt-name">网易智造减压眼部按摩仪</text>
+                    <text class="pdt-price">¥449</text>
+                </view>
+              </navigator>
+              <navigator url="/pages/index/receive/receive" hover-class="none">
+                <view class="pdt-right">
+                  <image class="pdt-img" src="/libs/images/yanjing.png"></image>
+                  <text class="pdt-name">网易智造减压眼部按摩仪</text>
+                  <text class="pdt-price">¥449</text>
+              </view>
+            </navigator>
+          </view>
+            <view class="product">
+              <navigator url="/pages/index/receive/receive" hover-class="none">
+                <view class="pdt-left">
+                  <image class="pdt-img" src="/libs/images/yanjing.png"></image>
+                  <text class="pdt-name">网易智造减压眼部按摩仪</text>
+                  <text class="pdt-price">¥449</text>
+              </view>
+              </navigator>
+              <navigator url="/pages/index/receive/receive" hover-class="none">
+                <view class="pdt-right">
+                    <image class="pdt-img" src="/libs/images/yanjing.png"></image>
+                    <text class="pdt-name">网易智造减压眼部按摩仪</text>
+                    <text class="pdt-price">¥449</text>
+                </view>
+              </navigator>
+            </view>
+          <view class="product">
+              <navigator url="/pages/index/receive/receive" hover-class="none">
+                <view class="pdt-left">
+                    <image class="pdt-img" src="/libs/images/yanjing.png"></image>
+                    <text class="pdt-name">网易智造减压眼部按摩仪</text>
+                    <text class="pdt-price">¥449</text>
+                </view>
+              </navigator>
+              <navigator url="/pages/index/receive/receive" hover-class="none">
+                <view class="pdt-right">
+                    <image class="pdt-img" src="/libs/images/yanjing.png"></image>
+                    <text class="pdt-name">网易智造减压眼部按摩仪</text>
+                    <text class="pdt-price">¥449</text>
+                </view>
+              </navigator>
+            </view>
+          <view class="product">
+            <navigator url="/pages/index/receive/receive" hover-class="none">
+              <view class="pdt-left">
+                  <image class="pdt-img" src="/libs/images/yanjing.png"></image>
+                  <text class="pdt-name">网易智造减压眼部按摩仪</text>
+                  <text class="pdt-price">¥449</text>
+              </view>
+            </navigator>
+            <navigator url="/pages/index/receive/receive" hover-class="none">
+              <view class="pdt-right">
+                  <image class="pdt-img" src="/libs/images/yanjing.png"></image>
+                  <text class="pdt-name">网易智造减压眼部按摩仪</text>
+                  <text class="pdt-price">¥449</text>
+              </view>
+            </navigator>
+          </view>
+        </view>
+    </view>
+  </view>
+  <view class="home_ft">
+    <view class="ft">更多内容，敬请期待</view>
+  </view>
+</scroll-view>

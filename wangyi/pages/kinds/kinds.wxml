@@ -1,0 +1,27 @@
+<view class="main">
+    <scroll-view class="menu-left" scroll-y scroll-with-animation="{{true}}">
+        <view class="cate-list {{curIndex==index?'on':''}}" wx:for="{{menu}}" wx:key="{{item.id}}" data-id="{{item.id}}" data-index="{{index}}" bindtap="switchCategory">
+            <text>{{item.name}}</text>
+        </view>
+    </scroll-view>
+    <scroll-view class="menu-right" scroll-y scroll-with-animation="{{true}}" srcoll-into-view="{{toView}}">
+        <block wx:for="{{detail}}" wx:key="{{item.id}}">
+            <view class="cate-box" id="{{item.id}}">
+                <view class="cate-banner">
+                    <image src="{{item.banner}}"></image>
+                </view>
+                <view class="cate-title">
+                    <text>{{cate-title}}</text>
+                </view>
+                <view class="cate-product">
+                    <view class="product-list" wx:for="{{item.product-list}}" wx:key="{{index}}">
+                        <image src="{{product-list.thumb}}"></image>
+                        <view class="product-list-name">
+                            <text>{{product-list.name}}</text>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </block>
+    </scroll-view>
+</view>

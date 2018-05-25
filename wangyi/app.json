@@ -1,0 +1,48 @@
+{
+  "pages": [
+    "pages/kinds/kinds",
+    "pages/index/index",
+    "pages/search/seach",
+    
+    "pages/buycar/buycar",
+    "pages/person/person",
+    "pages/index/receive/receive"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "网易严选",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "selectedColor": "#d81e06",
+    "borderStyle": "#fdfdfd",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "text": "首页",
+        "pagePath": "pages/index/index",
+        "iconPath": "libs/images/home.png",
+        "selectedIconPath": "libs/images/home-act.png"
+      },
+      {
+        "text": "分类",
+        "pagePath": "pages/kinds/kinds",
+        "iconPath": "libs/images/kinds.png",
+        "selectedIconPath": "libs/images/kinds-act.png"
+      },
+      {
+        "text": "购物车",
+        "pagePath": "pages/buycar/buycar",
+        "iconPath": "libs/images/buycar.png",
+        "selectedIconPath": "libs/images/buycar-act.png"
+      },
+      {
+        "text": "个人",
+        "pagePath": "pages/person/person",
+        "iconPath": "libs/images/person.png",
+        "selectedIconPath": "libs/images/person-act.png"
+      }
+    ]
+  }
+}

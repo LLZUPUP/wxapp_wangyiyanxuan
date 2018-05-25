@@ -1,0 +1,28 @@
+page,.main {
+    height: 100vh;
+}
+.menu-left {
+    float: left;
+    width: 164rpx;
+    height: 100%;
+    border-right: 1rpx solid #ddd;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.menu-right {
+    float: right;
+    width: 586rpx;
+    height: 100%;
+    overflow: hidden;
+}
+.menu-left .cate-list {
+    line-height: 40rpx;
+    text-align: center;
+    padding: 25rpx 0;
+    font-size: .8rem;
+}
+.menu-left .cate-list.on {
+    border-left: 3px solid #b2242f;
+    color: #b2242f;
+    font-size: 0.9rem;
+}

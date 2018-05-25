@@ -1,0 +1,6 @@
+<view class="addForm">
+    <view class="addForm-div">
+        <input type="text" class="search" placeholder="请输入" bindinput="getSearch" value="{{searchText}}" focus/>
+        <text class="empty" catchtap="cancelSearch"> {{searchText?'搜索':'取消'}}</text>
+    </view>
+</view>
