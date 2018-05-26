@@ -121,22 +121,6 @@
                 </view>
               </navigator>
             </view>
-          <view class="product">
-            <navigator url="/pages/index/receive/receive" hover-class="none">
-              <view class="pdt-left">
-                  <image class="pdt-img" src="/libs/images/maozi.png"></image>
-                  <text class="pdt-name">带帽日式多功能颈枕</text>
-                  <text class="pdt-price">¥80.1</text>
-              </view>
-            </navigator>
-            <navigator url="/pages/index/receive/receive" hover-class="none">
-              <view class="pdt-right">
-                  <image class="pdt-img" src="/libs/images/maozi.png"></image>
-                  <text class="pdt-name">带帽日式多功能颈枕</text>
-                  <text class="pdt-price">¥80.1</text>
-              </view>
-            </navigator>
-          </view>
         </view>
     </view>
   </view>
@@ -198,22 +182,7 @@
                 </view>
               </navigator>
             </view>
-          <view class="product">
-            <navigator url="/pages/index/receive/receive" hover-class="none">
-              <view class="pdt-left">
-                  <image class="pdt-img" src="/libs/images/yanjing.png"></image>
-                  <text class="pdt-name">网易智造减压眼部按摩仪</text>
-                  <text class="pdt-price">¥449</text>
-              </view>
-            </navigator>
-            <navigator url="/pages/index/receive/receive" hover-class="none">
-              <view class="pdt-right">
-                  <image class="pdt-img" src="/libs/images/yanjing.png"></image>
-                  <text class="pdt-name">网易智造减压眼部按摩仪</text>
-                  <text class="pdt-price">¥449</text>
-              </view>
-            </navigator>
-          </view>
+          
         </view>
     </view>
   </view>

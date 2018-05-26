@@ -1,4 +1,5 @@
 // pages/kinds/kinds.js
+import detail from '../../libs/data/kindsdata.js';
 Page({
 
   /**
@@ -22,6 +23,8 @@ Page({
       
     ],
     curIndex: 0,
+    detail,
+    toView:"tuijian"
   },
 
   /**
@@ -33,8 +36,10 @@ Page({
     })
   },
   switchCategory(e) {
+    console.log(e)
     this.setData({
       curIndex: e.currentTarget.dataset.index?e.currentTarget.dataset.index:0,
+      toView:e.currentTarget.dataset.id
 
     })
   },
@@ -43,7 +48,7 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-  
+
   },
 
   /**

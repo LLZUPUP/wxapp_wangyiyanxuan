@@ -26,3 +26,52 @@ page,.main {
     color: #b2242f;
     font-size: 0.9rem;
 }
+.cate-box {
+    padding: 30rpx;
+    box-sizing: border-box;
+    height: 100%;
+}
+.cate-box .cate-banner image {
+    height: 192rpx;
+    display: block;
+    width: 100%;
+}
+.cate-box .cate-title {
+    line-height: 30rpx;
+    padding: 40rpx 0 60rpx;
+    text-align: center;
+    color: #959595;
+    font-size: .8rem;
+    position: relative;
+}
+.cate-title:before,.cate-title:after {
+    width: 42rpx;
+    height: 1rpx;
+    background-color: #959595;
+    content: '';
+    position: absolute;
+    top: 54rpx;
+}
+.cate-title:after {
+    right: 125rpx;
+}
+.cate-title:before {
+    left: 125rpx;
+}
+.product-list {
+    display: inline-block;
+    width: 140rpx;
+    height: 190rpx;
+    font-size: 0.68rem;
+    text-align: center;
+    margin: 0 53rpx 32rpx 0;
+    vertical-align: top;
+}
+.product-list:nth-child(3n) {
+    margin-right: 0;
+}
+.product-list image {
+    width: 96rpx;
+    height: 96rpx;
+    margin-bottom: 10rpx;
+}

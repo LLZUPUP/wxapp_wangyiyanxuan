@@ -4,24 +4,24 @@
             <text>{{item.name}}</text>
         </view>
     </scroll-view>
-    <scroll-view class="menu-right" scroll-y scroll-with-animation="{{true}}" srcoll-into-view="{{toView}}">
+    <scroll-view class="menu-right" scroll-y  scroll-with-animation="{{true}}" scroll-into-view="{{toView}}">
         <block wx:for="{{detail}}" wx:key="{{item.id}}">
-            <view class="cate-box" id="{{item.id}}">
-                <view class="cate-banner">
+            <scroll-view class="cate-box" id="{{item.id}}" scroll-y>
+                <view class="cate-banner" bindtap="bannerDetails">
                     <image src="{{item.banner}}"></image>
                 </view>
                 <view class="cate-title">
-                    <text>{{cate-title}}</text>
+                    <text>{{item.title}}</text>
                 </view>
                 <view class="cate-product">
-                    <view class="product-list" wx:for="{{item.product-list}}" wx:key="{{index}}">
-                        <image src="{{product-list.thumb}}"></image>
+                    <view class="product-list" bindtap="productDetails" wx:for="{{item.productList}}" wx:key="{{index}}" wx:for-item="product">
+                        <image src="{{product.thumb}}"></image>
                         <view class="product-list-name">
-                            <text>{{product-list.name}}</text>
+                            <text>{{product.name}}</text>
                         </view>
                     </view>
                 </view>
-            </view>
+            </scroll-view>
         </block>
     </scroll-view>
 </view>
