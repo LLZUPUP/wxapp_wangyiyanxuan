@@ -1,2 +1,3 @@
-<!--pages/buycar/buycar.wxml-->
-<text>pages/buycar/buycar.wxml</text>
+<view class="container">
+    <view class="text">去添加点什么吧</view>
+</view>

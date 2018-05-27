@@ -1,1 +1,14 @@
-/* pages/buycar/buycar.wxss */
+.container {
+    background-color: #f4f4f4;
+    height: 100vh;
+    background: url(//yanxuan-static.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/icon-normal/noCart-a8fe3f12e5.png) no-repeat 50% 40%;
+    background-size: 222rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.text {
+    color: #b7b7b7;
+    margin-top: 50rpx;
+    
+}
