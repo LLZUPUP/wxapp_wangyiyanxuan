@@ -24,7 +24,7 @@ Page({
     ],
     curIndex: 0,
     detail,
-    toView:"tuijian",
+    toView:0,
   },
 
   /**
@@ -37,11 +37,9 @@ Page({
   },
   switchCategory(e) {
     console.log(e)
-    
     this.setData({
-      
       curIndex: e.currentTarget.dataset.index?e.currentTarget.dataset.index:0,
-      toView:e.currentTarget.dataset.id,
+      toView:e.currentTarget.dataset.index,
     })
   },
   productDetails(e) {

@@ -1,8 +1,8 @@
 {
   "pages": [
-    "pages/person/person",
     "pages/kinds/kinds",
     "pages/index/index",
+    "pages/person/person",
     "pages/search/seach",
     "pages/buycar/buycar",
     "pages/index/receive/receive"
