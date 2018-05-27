@@ -1,1 +1,49 @@
-/* pages/person/person.wxss */
+.weui-cell__hd image {
+    width: 50rpx;
+    height: 50rpx;
+    vertical-align: middle;
+}
+.head {
+    height: 222rpx;
+    box-sizing: border-box;
+    padding: 0 30rpx;
+    border: none;
+}
+.head_container {
+    background-color: #000000;
+    height: 100%;
+    width: 100%;
+    padding: 14rpx 22rpx;
+    box-sizing: border-box;
+    border-radius: 0 0 10rpx 10rpx;
+}
+.userimage {
+    display: block;
+    width: 146rpx;
+    height: 146rpx;
+    border-radius: 50%;
+    overflow: hidden;
+    float: left;
+    vertical-align: middle;
+}
+.username {
+    float: left;
+    color: #fff;
+    margin-left: 50rpx;
+    margin-top: 25rpx;
+}
+.stu_id {
+    color: #ccc;
+}
+.weui-cells:before,.weui-cells:after {
+    height: 0;
+    width: 0;
+}
+.text {
+    padding-left: 18rpx;
+}
+.weui-cell {
+    padding: 24rpx 30rpx;
+    color: #2e2e2e;
+    font-size: 0.8rem;
+}

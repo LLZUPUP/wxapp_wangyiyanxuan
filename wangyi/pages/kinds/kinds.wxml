@@ -4,7 +4,7 @@
             <text>{{item.name}}</text>
         </view>
     </scroll-view>
-    <scroll-view class="menu-right" scroll-y  scroll-with-animation="{{true}}" scroll-into-view="{{toView}}">
+    <scroll-view class="menu-right" scroll-y scroll-with-animation="{{true}}" scroll-into-view="{{toView}}">
         <block wx:for="{{detail}}" wx:key="{{item.id}}">
             <scroll-view class="cate-box" id="{{item.id}}" scroll-y>
                 <view class="cate-banner" bindtap="bannerDetails">
