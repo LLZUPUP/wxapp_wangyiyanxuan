@@ -5,12 +5,13 @@
     "pages/kinds/kinds",
     "pages/person/person",
     "pages/search/seach",
-    "pages/index/receive/receive"
+    "pages/index/receive/receive",
+    "pages/product/product"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "网易严选",
+    "navigationBarTitleText": "乐",
     "navigationBarTextStyle": "black"
   },
   "tabBar": {
