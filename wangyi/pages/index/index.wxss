@@ -6,7 +6,7 @@
   width: 690rpx;
   height: 56rpx;
   border-radius: 45rpx;
-  z-index: 2;
+  z-index: 2;  
   background-color: #fff;
   box-shadow: 0 0 1rpx #ccc;
 }
