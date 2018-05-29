@@ -1,3 +1,32 @@
 <view class="container">
-    
+    <view class="foo_buycar">
+        <navigator class="nav_home">
+            <image  src="/libs/images/home.png"></image>
+        </navigator>
+        <navigator class="nav_kefu">
+            <image  src="/libs/images/kefu.png"></image>
+        </navigator>
+        <navigator class="nav_buycar">
+            <image  src="/libs/images/buycar.png"></image>
+        </navigator>
+        <view>立即购买</view>
+        <view>加入购物车</view>
+
+    </view>
+    <swiper class="pdt_img" bindchange="changeSwiper" circular="true">
+        <swiper-item wx:for="{{images}}" wx:key="{{index}}">
+                <image class="pdt_image" src="{{item.url}}"></image>
+        </swiper-item>
+    </swiper>
+    <view class="img_text">{{current}}/4</view>
+    <view class="pdt_info">
+        <view class="info_hd">
+            <view class="info_title">带帽日式多功能颈枕</view>
+            <view class="info_ide">带帽设计，遮光更安心</view>
+        </view>
+        <view class="info_bd">
+            <view class="info_price">¥169</view>
+            <view class="info_des">购买最高得16积分</view>
+        </view>
+    </view>
 </view>

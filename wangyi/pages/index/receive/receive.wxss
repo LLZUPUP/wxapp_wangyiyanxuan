@@ -1,1 +1,88 @@
-/* pages/index/receive/receive.wxss */
+.container {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: #f4f4f4;
+}
+.foo_buycar {
+    width: 100%;
+    height: 98rpx;
+    background-color: #fafafa;
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    box-sizing: border-box;
+    border: 1rpx solid #d7d7d7;
+}
+.foo_buycar navigator {
+    height: 98rpx;
+    width: 98rpx;
+    line-height: 98rpx;
+    text-align: center;
+    border-right: 1rpx solid #d7d7d7;
+}
+.foo_buycar image {
+    height: 40rpx;
+    width: 40rpx;
+}
+.pdt_img {
+    height: 740rpx;
+    width: 100%;
+    position: relative;
+}
+.pdt_image {
+    height: 740rpx;
+    width: 100%;
+}
+.img_text {
+    position: absolute;
+    top: 688rpx;
+    right: 28rpx;
+    color: #000;
+    width: 54rpx;
+    line-height: 28rpx;
+    text-align: center;
+    background-color: #fff;
+    font-size: 22rpx;
+}
+.pdt_info {
+    width: 100%;
+    height: 300rpx;
+    background-color: #fff;
+    box-sizing: border-box;
+    padding: 28rpx 0 28rpx 28rpx;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20rpx;
+}
+.info_title,info_ide {
+    line-height: 70rpx;
+}
+.info_title {
+    color: #313131;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+.info_ide {
+    color: #c5c5c5;
+    font-weight: normal;
+    font-size: 0.8rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.info_bd {
+    padding-top: 30rpx;
+}
+.info_price {
+    font-size: 1.2rem;
+    color: red;
+    float: left;
+    line-height: 72rpx;
+}
+.info_des {
+    color: #c5c5c5;
+    font-size: 0.6rem;
+    float: right;
+    line-height: 72rpx;
+}
+

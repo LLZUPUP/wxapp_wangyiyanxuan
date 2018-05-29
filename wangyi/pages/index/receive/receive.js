@@ -5,14 +5,36 @@ Page({
    * 页面的初始数据
    */
   data: {
-  
+    images:[
+      {
+        url: 'https://zll18314831310.github.io/wxapp_wangyiyanxuan/img/maozi.png',
+      },
+      {
+        url: 'https://zll18314831310.github.io/wxapp_wangyiyanxuan/img/maozi2.png',
+      },
+      {
+        url: 'https://zll18314831310.github.io/wxapp_wangyiyanxuan/img/maozi3.png',
+      },
+      {
+        url: 'https://zll18314831310.github.io/wxapp_wangyiyanxuan/img/maozi4.png',
+      }
+    ],
+    current: 1
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    wx.setNavigationBarTitle({
+      title: '商品详情',
+    })
+  },
+  changeSwiper(e) {
+    var current = e.detail.current+1;
+    this.setData({
+      current
+    })
   },
 
   /**
