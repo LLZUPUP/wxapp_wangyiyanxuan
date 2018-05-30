@@ -19,9 +19,10 @@ Page({
         url: 'https://zll18314831310.github.io/wxapp_wangyiyanxuan/img/maozi4.png',
       }
     ],
-    num: '',
+    modNum: '',
+    num: 1,
     current: 1,
-    hide: false,
+    hide: true,
     amounts:[
       {
         value:'藏青色',
@@ -36,7 +37,7 @@ Page({
       
     ],
     image: '/libs/images/lanmaomin.png',
-    model:'请选择规格属性'
+    model:''
   },
 
   /**
@@ -73,12 +74,43 @@ Page({
   },
   actionSheet(e) {
     this.setData({
-      hide: false
+      hide: false,
     })
   },
   upactionSheet(e) {
+    if(this.data.model) {
+      this.data.modNum = '*'+this.data.num;
+    }
     this.setData({
-      hide: true
+      hide: true,
+      modNum: this.data.modNum,
+      model: this.data.model
+    })
+  },
+  dropNum(e) {
+    let num = this.data.num;
+    let model = this.data.model;
+    let modNum = this.data.modNum;
+    num--;
+    if(num<1) {
+      wx.showToast({
+        title: '必须买一件',
+        icon: 'none'
+      })
+      num=1;
+    }
+    this.setData({
+      num,
+    })
+
+  },
+  addNum(e) {
+    let num = this.data.num;
+    let modNum = this.data.modNum;
+    let model = this.data.model;
+    num++;
+    this.setData({
+      num,
     })
   },
 

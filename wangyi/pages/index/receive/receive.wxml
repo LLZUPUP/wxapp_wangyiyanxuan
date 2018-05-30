@@ -28,14 +28,20 @@
             <view class="info_des">购买最高得16积分</view>
         </view>
     </view>
-    <view class="weui-cells weui-cells_after-title">
-        <view class="weui-cell weui-cell_access" hover-class="weui-cell_active" bindtap="actionSheet">
-            <view class="weui-cell__bd">{{model}}{{num}}</view>
+    <view class="weui-cells weui-cells_after-title test">
+        <view class="weui-cell weui-cell_access " hover-class="weui-cell_active" bindtap="actionSheet">
+            <view class="weui-cell__bd">{{model?model:'请选择规格属性'}}{{modNum}}</view>
             <view class="weui-cell__ft weui-cell__ft_in-access"></view>
         </view>
-        <view class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+        <view class="weui-cell weui-cell_access pdt_server" hover-class="weui-cell_active">
             <view class="weui-cell__bd">服务</view>
-            <view class="weui-cell__ft weui-cell__ft_in-access">说明文字</view>
+            <view class="weui-cell__ft weui-cell__ft_in-access">
+                <text class="server">48小时快速退款</text>
+                <text class="server">满88元免邮费</text>
+                <text class="server">网易自营品牌</text>
+                <text class="server">免费配送到家</text>
+                <text class="server">部分地区无法配送</text>
+            </view>
         </view>
     </view>
 </view>
@@ -60,6 +66,12 @@
                     </view>
                 </label>
             </radio-group>
+        </view>
+        <view class="tt">数量</view>
+        <view class="con">
+            <view class="drop" bindtap="dropNum">-</view>
+            <view class="num">{{num}}</view>
+            <view class="add" bindtap="addNum">+</view>
         </view>
     </view>
 </view>

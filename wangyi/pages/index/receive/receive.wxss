@@ -150,17 +150,17 @@
     color: #b4282d;
 }
 .tt {
-    margin-bottom: 15rpx;
+    margin-bottom: 20rpx;
+}
+.con {
+    margin-bottom: 50rpx;
 }
 .weui-flex {
     flex-wrap: wrap;
 }
-label {
-    margin-top: 20rpx;
-}
 .weui-check__label {
     display: flex;
-    height: 2em;
+    height: 54rpx;
     text-align: center;
     border: 1px solid #d9d9d9;
     border-radius: 10rpx;
@@ -176,4 +176,31 @@ label {
     border-color: #b4282d;
     color: #b4282d;
 }
-
+.drop,.add {
+    display: inline-block;
+    width: 90rpx;
+    height: 66rpx;
+    text-align: center;
+    line-height: 66rpx;
+    border: 1rpx solid #ccc;
+}
+.num {
+    display: inline-block;
+    width: 129rpx;
+    line-height: 66rpx;
+    text-align: center;
+    border-top: 1rpx solid #ccc;
+    border-bottom: 1rpx solid #ccc; 
+}
+.test {
+    margin-bottom: 1000rpx;
+}
+.pdt_server {
+    height: 180rpx;
+}
+.server {
+    font-size: 25rpx;
+    width: 215rpx;
+    margin-right: 10rpx;
+    white-space: normal;
+}
