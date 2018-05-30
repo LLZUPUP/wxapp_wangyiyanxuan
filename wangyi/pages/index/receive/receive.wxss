@@ -195,6 +195,7 @@
 /* actionsheet页面end */
 .model {
     line-height: 104rpx;
+    font-size: .8rem;
 }
 .pdt_server {
     height: 180rpx;
@@ -205,18 +206,19 @@
     float: left;
 }
 .server {
-    font-size: 30rpx;
+    font-size: .7rem;
     margin: 0 50rpx 10rpx 0;
     white-space: normal;
     padding-left: 15rpx;
     display: inline-block;
     text-align: left;
     position: relative;
-    line-height: 1;
 }
 .left {
     margin-right: 20rpx;
     float: left;
+    font-size: .8rem;
+    line-height: 55rpx;
 }
 .right {
     float: right;
@@ -256,5 +258,8 @@
 }
 .scroll_server {
     height: 625rpx;
+}
+.content_tt {
+    font-size: .9rem;
 }
 
