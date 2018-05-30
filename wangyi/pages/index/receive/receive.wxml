@@ -24,29 +24,30 @@
             <view class="info_ide">带帽设计，遮光更安心</view>
         </view>
         <view class="info_bd">
-            <view class="info_price">¥169</view>
+            <view class="info_price">¥89</view>
             <view class="info_des">购买最高得16积分</view>
         </view>
     </view>
-    <view class="weui-cells weui-cells_after-title test">
-        <view class="weui-cell weui-cell_access " hover-class="weui-cell_active" bindtap="actionSheet">
+    <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell weui-cell_access model" hover-class="weui-cell_active" bindtap="actionSheet">
             <view class="weui-cell__bd">{{model?model:'请选择规格属性'}}{{modNum}}</view>
             <view class="weui-cell__ft weui-cell__ft_in-access"></view>
         </view>
-        <view class="weui-cell weui-cell_access pdt_server" hover-class="weui-cell_active">
-            <view class="weui-cell__bd">服务</view>
-            <view class="weui-cell__ft weui-cell__ft_in-access">
-                <text class="server">48小时快速退款</text>
-                <text class="server">满88元免邮费</text>
-                <text class="server">网易自营品牌</text>
-                <text class="server">免费配送到家</text>
-                <text class="server">部分地区无法配送</text>
+        <view class="weui-cell weui-cell_access pdt_server" hover-class="weui-cell_active" bindtap="actionSer">
+            <view class="weui-cell__bd left">服务：</view>
+            <view class="weui-cell__ft weui-cell__ft_in-access right">
+                <block wx:for="{{server}}" wx:key="{{index}}">
+                    <view class="server_box">
+                        <text class="server">{{item.tit}}</text>
+                    </view>
+                </block>
+                
             </view>
         </view>
     </view>
 </view>
 <view class="actionbgc {{hide?'hide':''}}" bindtap="upactionSheet"></view>
-<view class="actionsheet {{hide?'':'show'}}">
+<scroll-view scroll-y class="actionsheet {{hide?'':'show'}}">
     <image src="/libs/images/cancel.png" class="actcancel" bindtap="upactionSheet"></image>
     <view class="action_hd" >
         <image class="modImg" src="{{image}}"></image>
@@ -74,4 +75,16 @@
             <view class="add" bindtap="addNum">+</view>
         </view>
     </view>
+</scroll-view>
+<view class="actionbgc {{serHide?'hide':''}}" bindtap="upactionSer"></view>
+<view class="actionsheet actser {{serHide?'':'show'}}">
+    <view class="server_tit">服务</view>
+    <scroll-view scroll-y class="scroll_server">
+        <view class="server_content" wx:for="{{server}}" wx:key="{{index}}">
+            <view class="server">{{item.tit}}</view>
+            <view class="content_se">{{item.content}}</view>
+        </view>
+    </scroll-view>
+    
 </view>
+

@@ -74,8 +74,8 @@
 }
 .info_title {
     color: #313131;
-    font-size: 0.9rem;
-    font-weight: bold;
+    font-size: 1rem;
+    font-weight: 500;
 }
 .info_ide {
     color: #c5c5c5;
@@ -94,7 +94,7 @@
 }
 .info_des {
     color: #c5c5c5;
-    font-size: 0.6rem;
+    font-size: 0.7rem;
     float: right;
     line-height: 72rpx;
 }
@@ -192,15 +192,69 @@
     border-top: 1rpx solid #ccc;
     border-bottom: 1rpx solid #ccc; 
 }
-.test {
-    margin-bottom: 1000rpx;
+/* actionsheet页面end */
+.model {
+    line-height: 104rpx;
 }
 .pdt_server {
     height: 180rpx;
+    display: block;
+    box-sizing: border-box;
+}
+.server_box {
+    float: left;
 }
 .server {
-    font-size: 25rpx;
-    width: 215rpx;
-    margin-right: 10rpx;
+    font-size: 30rpx;
+    margin: 0 50rpx 10rpx 0;
     white-space: normal;
+    padding-left: 15rpx;
+    display: inline-block;
+    text-align: left;
+    position: relative;
+    line-height: 1;
 }
+.left {
+    margin-right: 20rpx;
+    float: left;
+}
+.right {
+    float: right;
+    width: 550rpx;
+    padding: 0;
+    box-sizing: border-box;
+}
+.server:before {
+    content: '';
+    height: 10rpx;
+    width: 10rpx;
+    background-color: #b4282d;
+    border-radius: 50%;
+    position: absolute;
+    left: -5rpx;
+    top: 50%;
+    margin-top: -5rpx;
+}
+/* 服务actionsheet样式 */
+.actser {
+    height: 742rpx;
+    padding: 0;
+    z-index: 100;
+}
+.actser .server_tit {
+    line-height: 114rpx;
+    text-align: center;
+    border-bottom: 1rpx solid #d7d7d7;
+}
+.actser .server_content {
+    box-sizing: border-box;
+    padding: 22rpx 28rpx 40rpx;
+}
+.actser .content_se {
+    padding-left: 15rpx;
+    color: #7d7d7d;
+}
+.scroll_server {
+    height: 625rpx;
+}
+

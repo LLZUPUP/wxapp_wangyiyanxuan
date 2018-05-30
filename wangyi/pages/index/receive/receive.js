@@ -19,10 +19,33 @@ Page({
         url: 'https://zll18314831310.github.io/wxapp_wangyiyanxuan/img/maozi4.png',
       }
     ],
+    server: [
+      {
+        tit: '48小时快速退款',
+        content: '收到退货包裹并确认无误后，将在48小时内办理退款，退款将原路返回，不同银行处理时间不同，预计1-5个工作日到账。'
+      },
+      {
+        tit: '满88元免邮费',
+        content: '单笔订单金额（不含运费），大陆地区满88元免邮，不满88元收取10元邮费；港澳台地区满500元免邮，不满500元收取30元运费；海外地区以下单页提示运费为准。'
+      },
+      {
+        tit: '网易自营品牌',
+        content: '网易原创生活类电商品牌，所有商品均为网易自营，品质保证。'
+      },
+      {
+        tit: '免费配送到家',
+        content: '在该商品支持配送地区内，支持免费配送到家'
+      },
+      {
+        tit: '部分地区无法配送',
+        content: '不支持省份: 台湾、香港、澳门、新疆'
+      }
+    ],
     modNum: '',
     num: 1,
     current: 1,
     hide: true,
+    serHide: true,
     amounts:[
       {
         value:'藏青色',
@@ -85,6 +108,16 @@ Page({
       hide: true,
       modNum: this.data.modNum,
       model: this.data.model
+    })
+  },
+  actionSer(e) {
+    this.setData({
+      serHide: false
+    })
+  },
+  upactionSer(e) {
+    this.setData({
+      serHide: true
     })
   },
   dropNum(e) {
