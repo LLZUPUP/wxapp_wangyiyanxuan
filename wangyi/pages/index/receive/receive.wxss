@@ -1,9 +1,9 @@
 .container {
-    height: 100vh;
+    height: 100%;
     width: 100%;
     display: flex;
-    align-items: center;
     background-color: #f4f4f4;
+    box-sizing: border-box;
 }
 .foo_buycar {
     width: 100%;
@@ -14,6 +14,7 @@
     bottom: 0;
     box-sizing: border-box;
     border: 1rpx solid #d7d7d7;
+    z-index: 99;
 }
 .foo_buycar navigator {
     height: 98rpx;
@@ -25,6 +26,18 @@
 .foo_buycar image {
     height: 40rpx;
     width: 40rpx;
+}
+.navbuy {
+    width: 220rpx;
+}
+.navbuy,.addcar {
+    line-height: 98rpx;
+    text-align: center;
+}
+.addcar {
+    background-color: #b52628;
+    color: #fff;
+    flex: 1;
 }
 .pdt_img {
     height: 740rpx;
@@ -48,10 +61,10 @@
 }
 .pdt_info {
     width: 100%;
-    height: 300rpx;
+    height: 250rpx;
     background-color: #fff;
     box-sizing: border-box;
-    padding: 28rpx 0 28rpx 28rpx;
+    padding: 28rpx;
     display: flex;
     flex-direction: column;
     margin-bottom: 20rpx;
@@ -84,5 +97,83 @@
     font-size: 0.6rem;
     float: right;
     line-height: 72rpx;
+}
+/* actionsheet页面样式 */
+.actionbgc {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index:90;
+    background-color: rgba(0,0,0,.4);
+}
+.actionsheet.show {
+    transform: translateY(0rpx);
+}
+
+.actionsheet {
+    z-index: 91;
+    width: 100%;
+    height: 968rpx;
+    background-color: #fff;
+    position: fixed;
+    bottom: 0;
+    transform: translateY(100%);
+    transition: transform .3s;
+    padding: 40rpx 30rpx;
+    box-sizing: border-box;
+}
+.action_hd {
+    display: flex;
+    margin-bottom: 44rpx;
+}
+.actcancel {
+    height: 30rpx;
+    width: 30rpx;
+    position: absolute;
+    right: 30rpx;
+    top: 30rpx;
+}
+.modImg {
+    height: 175rpx;
+    width: 175rpx;
+    background-color: #f4f4f4;
+}
+.modText {
+    height: 175rpx;
+    padding: 70rpx 0 0 20rpx;
+    box-sizing: border-box;
+    font-size: .9rem;
+}
+.modPrice {
+    color: #b4282d;
+}
+.tt {
+    margin-bottom: 15rpx;
+}
+.weui-flex {
+    flex-wrap: wrap;
+}
+label {
+    margin-top: 20rpx;
+}
+.weui-check__label {
+    display: flex;
+    height: 2em;
+    text-align: center;
+    border: 1px solid #d9d9d9;
+    border-radius: 10rpx;
+    justify-content: center;
+    align-items: center;
+    margin-right: 30rpx;
+    padding: 20rpx 30rpx;
+}
+.weui-check__label text {
+    display: inline-block;
+}
+.weui-check__label.checked {
+    border-color: #b4282d;
+    color: #b4282d;
 }
 

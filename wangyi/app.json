@@ -6,8 +6,8 @@
     "pages/kinds/kinds",
     "pages/person/person",
     "pages/search/seach",
-    
-    "pages/product/product"
+    "pages/product/product",
+    "pages/index/model/model"
   ],
   "window": {
     "backgroundTextStyle": "light",

@@ -19,7 +19,24 @@ Page({
         url: 'https://zll18314831310.github.io/wxapp_wangyiyanxuan/img/maozi4.png',
       }
     ],
-    current: 1
+    num: '',
+    current: 1,
+    hide: false,
+    amounts:[
+      {
+        value:'藏青色',
+        checked:false,
+        image: '/libs/images/lanmaomin.png',
+      },
+      {
+        value:'麻灰色',
+        checked:false,
+        image: '/libs/images/baimaomin.png',
+      }
+      
+    ],
+    image: '/libs/images/lanmaomin.png',
+    model:'请选择规格属性'
   },
 
   /**
@@ -30,10 +47,38 @@ Page({
       title: '商品详情',
     })
   },
+  bindAmountChange(e) {
+    // console.log(e)
+    let amounts = this.data.amounts;
+    let strVal = e.detail.value;
+    let image;
+    for(let amount of amounts) {
+      amount.checked = amount.value ==strVal;
+      // console.log(amount)
+      if(amount.checked==true) {
+        image = amount.image;
+      }
+    }
+    this.setData({
+      amounts,
+      model: '已选择：'+strVal,
+      image
+    })
+  },
   changeSwiper(e) {
     var current = e.detail.current+1;
     this.setData({
       current
+    })
+  },
+  actionSheet(e) {
+    this.setData({
+      hide: false
+    })
+  },
+  upactionSheet(e) {
+    this.setData({
+      hide: true
     })
   },
 
