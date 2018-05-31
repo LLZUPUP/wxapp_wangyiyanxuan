@@ -1,10 +1,53 @@
-// pages/index/receive/receive.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    tuijian:[
+      {
+          banner: 'https://zll18314831310.github.io/wxapp_wangyiyanxuan/img/tuijian1.png',
+          title: '日式多功能颈枕 双扣款',
+          price: '¥69'
+      },
+      {
+          banner: 'https://zll18314831310.github.io/wxapp_wangyiyanxuan/img/tuijian2.png',
+          title: '日式多功能颈枕 舒滑款',
+          price: '¥69'
+      },
+      {
+          banner: 'https://zll18314831310.github.io/wxapp_wangyiyanxuan/img/tuijian3.png',
+          title: '旅行颈枕眼罩套装',
+          price: '¥53.1'
+      },
+      {
+          banner: 'https://zll18314831310.github.io/wxapp_wangyiyanxuan/img/tuijian4.png',
+          title: '日式和风便携眼罩',
+          price: '¥29'
+      },
+      {
+          banner: 'https://zll18314831310.github.io/wxapp_wangyiyanxuan/img/tuijian5.png',
+          title: '蒸汽热敷眼罩',
+          price: '¥49'
+      }
+  ],
+  rexiao: [
+    {
+        banner: 'https://zll18314831310.github.io/wxapp_wangyiyanxuan/img/rexiao1.png',
+        title: '乳液按压分装瓶',
+        price: '¥9.9'
+    },
+    {
+        banner: 'https://zll18314831310.github.io/wxapp_wangyiyanxuan/img/rexiao2.png',
+        title: '可裸睡纯棉便携睡袋',
+        price: '¥129'
+    },
+    {
+        banner: 'https://zll18314831310.github.io/wxapp_wangyiyanxuan/img/rexiao3.png',
+        title: '杜邦纸旅行套装',
+        price: '¥99'
+    }
+],
     images:[
       {
         url: 'https://zll18314831310.github.io/wxapp_wangyiyanxuan/img/maozi.png',
@@ -60,7 +103,10 @@ Page({
       
     ],
     image: '/libs/images/lanmaomin.png',
-    model:''
+    model:'',
+    curIndex: 0,
+    showrx: false,
+    showtj: true
   },
 
   /**
@@ -69,6 +115,24 @@ Page({
   onLoad: function (options) {
     wx.setNavigationBarTitle({
       title: '商品详情',
+    })
+  },
+  switchCategory(e) {
+    console.log(e)
+    let index = e.currentTarget.dataset.index;
+    if(index==0) {
+      this.setData({
+        showrx: false,
+        showtj: true  
+      })
+    }else {
+      this.setData({
+        showrx: true,
+        showtj: false 
+      })
+    }
+    this.setData({
+      curIndex: e.currentTarget.dataset.index?e.currentTarget.dataset.index:0,
     })
   },
   bindAmountChange(e) {
@@ -146,6 +210,11 @@ Page({
       num,
     })
   },
+
+
+
+
+
 
   /**
    * 生命周期函数--监听页面初次渲染完成

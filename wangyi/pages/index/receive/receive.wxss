@@ -14,7 +14,7 @@
     bottom: 0;
     box-sizing: border-box;
     border: 1rpx solid #d7d7d7;
-    /* z-index: 99; */
+    z-index: 99;
 }
 .foo_buycar navigator {
     height: 98rpx;
@@ -275,5 +275,57 @@
 }
 .pdt_select {
     margin-bottom: 20rpx;
+}
+.rec {
+    height: 510rpx;
+    background-color: #fff;
+    margin-bottom: 20rpx;
+}
+.rec_tt {
+    height: 80rpx;
+    display: flex;
+    border-bottom: 1rpx solid #ddd;
+}
+.cate_list {
+    line-height: 80rpx;
+    text-align: center;
+    flex: 1;
+    box-sizing: border-box;
+    padding: 0 60rpx 5rpx;
+}
+.cate_list text {
+    display: block;
+}
+text.on {
+    border-bottom: 5rpx solid #a43338;
+    color: #a43338;
+}
+.cate_box {
+    height: 418rpx;
+    width: 100%;
+    white-space: nowrap;
+}
+.tj_img {
+    height: 238rpx;
+    width: 236rpx;
+    background-color: #f4f4f4;
+}
+.tuijian {
+    height: 100%;
+    width: 256rpx;
+    display: inline-block;
+    text-align: left;
+    box-sizing: border-box;
+    padding: 20rpx 10rpx;
+}
+.tj_tt {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #717171;
+    line-height: 60rpx;
+}
+.tj_pc {
+    color: #f67282;
 }
 
