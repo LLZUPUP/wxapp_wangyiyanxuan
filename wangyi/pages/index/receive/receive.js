@@ -46,6 +46,11 @@ Page({
         banner: 'https://zll18314831310.github.io/wxapp_wangyiyanxuan/img/rexiao3.png',
         title: '杜邦纸旅行套装',
         price: '¥99'
+    },
+    {
+      banner: 'https://zll18314831310.github.io/wxapp_wangyiyanxuan/img/tuijian5.png',
+      title: '蒸汽热敷眼罩',
+      price: '¥49'
     }
 ],
     images:[

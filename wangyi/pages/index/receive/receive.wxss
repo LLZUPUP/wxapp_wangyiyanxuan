@@ -328,4 +328,24 @@ text.on {
 .tj_pc {
     color: #f67282;
 }
+.para {
+    padding: 20rpx;
+    background-color: #fff;
+    box-sizing: border-box;
+}
+.para_tt {
+    padding: 20rpx 0;
+}
+.para_ct {
+    padding: 10rpx;
+    border-top: 1rpx dotted #ddd;
+}
+.para_ct_lt {
+    float: left;
+    font-size: 0.65rem;
+}
+.para_ct_rt {
+    margin-left: 150rpx;
+    font-size: 0.65rem;
+}
 

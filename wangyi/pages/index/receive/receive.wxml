@@ -76,6 +76,26 @@
             </block>
         </scroll-view>
     </view>
+    <view class="para">
+        <view>
+            <view class="para_tt">商品参数</view>
+            <view class="para_ct">
+                <view class="para_ct_lt">材质信息</view>
+                <view class="para_ct_rt">
+                    <view>外套面料：100%棉</view>
+                    <view>内胆面料：85%锦纶15%氨纶</view>
+                    <view>填充物：100%聚苯乙烯（发泡粒子)</view>
+                </view>
+            </view>
+            <view class="para_ct">
+                <view class="para_ct_lt">注意事项</view>
+                <view class="para_ct_rt">
+                    <view>本品为人工填充粒子，重量难免会有误差，敬请谅解。同时产品在运输过程中受挤压，也可能会造成凹陷。储存时请避免重物挤压以引起泡沫粒子塌陷。</view>
+                </view>
+                
+            </view>
+        </view>
+    </view>
 </view>
 
 
