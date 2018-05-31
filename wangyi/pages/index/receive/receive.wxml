@@ -92,8 +92,12 @@
                 <view class="para_ct_rt">
                     <view>本品为人工填充粒子，重量难免会有误差，敬请谅解。同时产品在运输过程中受挤压，也可能会造成凹陷。储存时请避免重物挤压以引起泡沫粒子塌陷。</view>
                 </view>
-                
             </view>
+        </view>
+    </view>
+    <view class="para-info">
+        <view>
+            <image src=""></image>
         </view>
     </view>
 </view>

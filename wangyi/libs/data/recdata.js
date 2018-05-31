@@ -1,0 +1,5 @@
+const detail = [
+    {
+        image: ''
+    }
+]

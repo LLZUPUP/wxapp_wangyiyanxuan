@@ -338,7 +338,7 @@ text.on {
 }
 .para_ct {
     padding: 10rpx;
-    border-top: 1rpx dotted #ddd;
+    border-top: 1rpx dashed #ddd;
 }
 .para_ct_lt {
     float: left;
