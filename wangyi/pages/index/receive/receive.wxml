@@ -28,7 +28,7 @@
             <view class="info_des">购买最高得16积分</view>
         </view>
     </view>
-    <view class="weui-cells weui-cells_after-title">
+    <view class="weui-cells weui-cells_after-title pdt_select">
         <view class="weui-cell weui-cell_access model" hover-class="weui-cell_active" bindtap="actionSheet">
             <view class="weui-cell__bd">{{model?model:'请选择规格属性'}}{{modNum}}</view>
             <view class="weui-cell__ft weui-cell__ft_in-access"></view>
@@ -41,11 +41,28 @@
                         <text class="server">{{item.tit}}</text>
                     </view>
                 </block>
-                
             </view>
         </view>
+        <navigator class="weui-cell weui-cell_access comment" hover-class="weui-cell_active" url="">
+            <view class="weui-cell__bd text">用户评价(73137)</view>
+            <view class="weui-cell__ft  weui-cell__ft_in-access comment_rt">98.3%好评</view>
+        </navigator>
+    </view>
+    <view class="rec">
+        <scroll-view scroll-x class="rec_tt">
+            <view class="cate_list">
+                <text></text>
+            </view>
+        </scroll-view>
     </view>
 </view>
+
+
+
+
+
+
+
 <view class="actionbgc {{hide?'hide':''}}" bindtap="upactionSheet"></view>
 <scroll-view scroll-y class="actionsheet {{hide?'':'show'}}">
     <image src="/libs/images/cancel.png" class="actcancel" bindtap="upactionSheet"></image>

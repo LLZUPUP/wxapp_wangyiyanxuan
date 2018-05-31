@@ -14,7 +14,7 @@
     bottom: 0;
     box-sizing: border-box;
     border: 1rpx solid #d7d7d7;
-    z-index: 99;
+    /* z-index: 99; */
 }
 .foo_buycar navigator {
     height: 98rpx;
@@ -255,11 +255,25 @@
 .actser .content_se {
     padding-left: 15rpx;
     color: #7d7d7d;
+    font-size: 0.8rem;
 }
 .scroll_server {
     height: 625rpx;
 }
 .content_tt {
     font-size: .9rem;
+}
+/* 服务actionsheet样式end */
+.comment {
+    width: 100%;
+    box-sizing: border-box;
+    line-height: 91rpx;
+    font-size: 0.8rem;
+}
+.comment_rt {
+    color: #333333;
+}
+.pdt_select {
+    margin-bottom: 20rpx;
 }
 
