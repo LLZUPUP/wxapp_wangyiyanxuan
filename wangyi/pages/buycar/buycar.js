@@ -1,11 +1,11 @@
-// pages/buycar/buycar.js
+const app = getApp();
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-  
+    hasCarNum: null
   },
 
   /**
@@ -15,6 +15,12 @@ Page({
     wx.setNavigationBarTitle({
       title: '购物车'
     })
+    if(app.globalData.carNum) {
+      this.setData({
+        hasCarNum: app.globalData.carNum
+        
+      })
+    }
   },
 
   /**

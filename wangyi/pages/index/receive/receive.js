@@ -1,3 +1,5 @@
+import detail from '../../../libs/data/recdata.js';
+const app = getApp();
 Page({
 
   /**
@@ -89,6 +91,7 @@ Page({
         content: '不支持省份: 台湾、香港、澳门、新疆'
       }
     ],
+    detail,
     modNum: '',
     num: 1,
     current: 1,
@@ -111,7 +114,8 @@ Page({
     model:'',
     curIndex: 0,
     showrx: false,
-    showtj: true
+    showtj: true,
+    carNum: 0
   },
 
   /**
@@ -122,6 +126,22 @@ Page({
       title: '商品详情',
     })
   },
+
+  addCar(e) {
+    let num = this.data.num;
+    let carNum = this.data.carNum;
+    carNum +=num; 
+    if(this.data.model){
+      this.setData({
+        carNum
+      })
+    }
+    wx.setStorage({
+      key: 'carNum',
+      data: this.data.carNum
+    })
+  },
+
   switchCategory(e) {
     console.log(e)
     let index = e.currentTarget.dataset.index;
@@ -140,6 +160,7 @@ Page({
       curIndex: e.currentTarget.dataset.index?e.currentTarget.dataset.index:0,
     })
   },
+
   bindAmountChange(e) {
     // console.log(e)
     let amounts = this.data.amounts;
@@ -158,17 +179,20 @@ Page({
       image
     })
   },
+
   changeSwiper(e) {
     var current = e.detail.current+1;
     this.setData({
       current
     })
   },
+
   actionSheet(e) {
     this.setData({
       hide: false,
     })
   },
+
   upactionSheet(e) {
     if(this.data.model) {
       this.data.modNum = '*'+this.data.num;
@@ -179,16 +203,19 @@ Page({
       model: this.data.model
     })
   },
+
   actionSer(e) {
     this.setData({
       serHide: false
     })
   },
+
   upactionSer(e) {
     this.setData({
       serHide: true
     })
   },
+
   dropNum(e) {
     let num = this.data.num;
     let model = this.data.model;
@@ -204,8 +231,8 @@ Page({
     this.setData({
       num,
     })
-
   },
+  
   addNum(e) {
     let num = this.data.num;
     let modNum = this.data.modNum;

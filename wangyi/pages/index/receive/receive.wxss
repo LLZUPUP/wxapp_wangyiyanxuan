@@ -16,6 +16,22 @@
     border: 1rpx solid #d7d7d7;
     z-index: 99;
 }
+.foo_buycar .car_img {
+    position: relative;
+}
+.carNum {
+    height: 30rpx;
+    width: 30rpx;
+    border-radius: 50%;
+    background-color: #d42735;
+    position: absolute;
+    right: 15rpx;
+    top: 10rpx;
+    text-align: center;
+    color: #fff;
+    line-height: 30rpx;
+    font-size: 0.5rem;
+}
 .foo_buycar navigator {
     height: 98rpx;
     width: 98rpx;
@@ -347,5 +363,12 @@ text.on {
 .para_ct_rt {
     margin-left: 150rpx;
     font-size: 0.65rem;
+}
+.para-info {
+    margin-bottom: 98rpx;
+}
+.para-info image {
+    display: block;
+    width: 100%;
 }
 

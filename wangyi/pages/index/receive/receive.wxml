@@ -1,17 +1,20 @@
 <view class="container">
-    <!-- <view class="foo_buycar">
+    <view class="foo_buycar">
         <navigator hover-class="none" open-type="switchTab" url="/pages/index/index">
-            <image  src="/libs/images/home.png"></image>
+            <image src="/libs/images/home.png"></image>
         </navigator>
         <navigator hover-class="none" url="">
-            <image  src="/libs/images/kefu.png"></image>
+            <image src="/libs/images/kefu.png"></image>
         </navigator>
-        <navigator hover-class="none" open-type="switchTab" url="../../buycar/buycar">
-            <image  src="/libs/images/buycar.png"></image>
+        <navigator class="car_img" hover-class="none" open-type="switchTab" url="../../buycar/buycar">
+            <image src="/libs/images/buycar.png">
+                <text class="carNum {{carNum?'':'hide'}}">{{carNum}}</text>
+            </image>
         </navigator>
+        
         <view class="navbuy">立即购买</view>
-        <view class="addcar">加入购物车</view>
-    </view> -->
+        <view class="addcar" bindtap="addCar">加入购物车</view>
+    </view>
     <swiper class="pdt_img" bindchange="changeSwiper" circular="true">
         <swiper-item wx:for="{{images}}" wx:key="{{index}}">
                 <image class="pdt_image" src="{{item.url}}"></image>
@@ -59,7 +62,7 @@
         </view>
         <scroll-view wx:if="{{showtj}}" class="cate_box" scroll-x scroll-with-animation="true">
             <block wx:for="{{tuijian}}" wx:key="{{index}}">
-                <navigator class="tuijian" hover-class="none">
+                <navigator class="tuijian" hover-class="none" url="/pages/index/receive/receive">
                         <image class="tj_img" src="{{item.banner}}"></image>
                         <view class="tj_tt">{{item.title}}</view>
                         <view class="tj_pc">{{item.price}}</view>
@@ -68,7 +71,7 @@
         </scroll-view>
         <scroll-view wx:if="{{showrx}}" class="cate_box" scroll-x scroll-with-animation="true">
             <block wx:for="{{rexiao}}" wx:key="{{index}}">
-                <navigator class="tuijian" hover-class="none">
+                <navigator class="tuijian" hover-class="none" url="/pages/index/receive/receive">
                         <image class="tj_img" src="{{item.banner}}"></image>
                         <view class="tj_tt">{{item.title}}</view>
                         <view class="tj_pc">{{item.price}}</view>
@@ -96,9 +99,10 @@
         </view>
     </view>
     <view class="para-info">
-        <view>
-            <image src=""></image>
-        </view>
+        <block wx:for="{{detail}}" wx:key="{{index}}">
+                <image src="{{item.image}}" mode="widthFix"></image>
+        </block>
+        
     </view>
 </view>
 

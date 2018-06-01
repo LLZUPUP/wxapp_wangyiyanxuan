@@ -1,18 +1,17 @@
 {
   "pages": [
-    "pages/index/receive/receive",
-    "pages/index/index",
     "pages/buycar/buycar",
+    "pages/index/index",
+    "pages/index/receive/receive",
     "pages/kinds/kinds",
     "pages/person/person",
     "pages/search/seach",
-    "pages/product/product",
-    "pages/index/model/model"
+    "pages/product/product"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "乐",
+    "navigationBarTitleText": "网易严选",
     "navigationBarTextStyle": "black"
   },
   "tabBar": {

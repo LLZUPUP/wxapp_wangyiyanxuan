@@ -1,3 +1,8 @@
-<view class="container">
+<view class="buycar" wx:if="{{hasCarNum}}">
+    <view>asda</view>
+    <view>asdasf</view>
+    <view>wafasfasf</view>
+</view>
+<view class="container {{hasCarNum?'hide':''}}">
     <view class="text">去添加点什么吧</view>
 </view>

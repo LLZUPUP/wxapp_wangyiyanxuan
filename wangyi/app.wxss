@@ -26,5 +26,5 @@ page {
   background-color: #f4f4f4;
 }
 .hide {
-  display: none;
+  display: none!important;
 }

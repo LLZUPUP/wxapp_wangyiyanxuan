@@ -12,3 +12,7 @@
     margin-top: 50rpx;
     
 }
+.buycar {
+    height: 100vh;
+    background-color: #f4f4f4;
+}
