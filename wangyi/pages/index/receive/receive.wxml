@@ -20,7 +20,7 @@
                 <image class="pdt_image" src="{{item.url}}"></image>
         </swiper-item>
     </swiper>
-    <view class="img_text">{{current}}/4</view>
+    <view class="img_text">{{current}}/{{images.length}}</view>
     <view class="pdt_info">
         <view class="info_hd">
             <view class="info_title">带帽日式多功能颈枕</view>

@@ -32,16 +32,14 @@ App({
         }
       }
     })
-    wx.getStorage({
-      key: 'carNum',
-      success: (res)=>{
-        this.globalData.carNum = res.data;
-      }
-    })
     
   },
+  
   globalData: {
     userInfo: null,
     carNum: null
-  }
+  },
+  
+
+
 })

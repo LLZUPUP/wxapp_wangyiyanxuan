@@ -5,7 +5,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    hasCarNum: null
+    hasCarNum: 0,
+    lists: [],
   },
 
   /**
@@ -15,26 +16,42 @@ Page({
     wx.setNavigationBarTitle({
       title: '购物车'
     })
-    if(app.globalData.carNum) {
-      this.setData({
-        hasCarNum: app.globalData.carNum
-        
-      })
-    }
+    
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-  
+    
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-  
+    // if (app.globalData.carNum) {
+    //   this.setData({
+    //     hasCarNum: app.globalData.carNum
+    //   })
+    // }
+    console.log(app.globalData.carNum)
+    wx.getStorage({
+      key: 'lists',
+      success: (res)=>{
+        this.setData({
+          lists: res.data,
+        })
+      }
+    })
+    wx.getStorage({
+      key: 'carNum',
+      success: (res)=> {
+        this.setData({
+          hasCarNum: res.data
+        })
+      }
+    })
   },
 
   /**

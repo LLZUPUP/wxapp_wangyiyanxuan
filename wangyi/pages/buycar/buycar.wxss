@@ -1,5 +1,5 @@
 .container {
-    background-color: #f4f4f4;
+    background-color: #fff;
     height: 100vh;
     background: url(//yanxuan-static.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/icon-normal/noCart-a8fe3f12e5.png) no-repeat 50% 40%;
     background-size: 222rpx;
@@ -15,4 +15,56 @@
 .buycar {
     height: 100vh;
     background-color: #f4f4f4;
+    position: relative;
+}
+/* hd */
+.car_hd {
+    line-height: 88rpx;
+    display: flex;
+    justify-content: space-between;
+    padding: 20rpx 66rpx;
+    box-sizing: border-box;
+}
+.car_hd text {
+    font-size: 10pt;
+    color: #696969;
+    position: relative;
+}
+.car_hd text:before {
+    content: '';
+    width: 6rpx;
+    height: 6rpx;
+    background-color: transparent;
+    border: 2rpx solid #696969;
+    border-radius: 50%;
+    position: absolute;
+    left: -16rpx;
+    top: 50%;
+    margin-top: -4rpx;
+}
+.car_bd {
+    height: 208rpx;
+    background-color: #fff;
+    border-bottom: 1rpx solid #f4f4f4;
+}
+
+
+
+
+
+.drop,.add {
+    display: inline-block;
+    width: 90rpx;
+    height: 66rpx;
+    text-align: center;
+    line-height: 66rpx;
+    border: 1rpx solid #ccc;
+}
+.num {
+    display: inline-block;
+    width: 129rpx;
+    line-height: 66rpx;
+    text-align: center;
+    border-top: 1rpx solid #ccc;
+    border-bottom: 1rpx solid #ccc; 
 }

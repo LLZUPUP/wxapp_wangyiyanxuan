@@ -1,4 +1,5 @@
 import detail from '../../../libs/data/recdata.js';
+import amounts from '../../../libs/data/buycardata.js';
 const app = getApp();
 Page({
 
@@ -57,9 +58,6 @@ Page({
 ],
     images:[
       {
-        url: 'https://zll18314831310.github.io/wxapp_wangyiyanxuan/img/maozi.png',
-      },
-      {
         url: 'https://zll18314831310.github.io/wxapp_wangyiyanxuan/img/maozi2.png',
       },
       {
@@ -97,25 +95,14 @@ Page({
     current: 1,
     hide: true,
     serHide: true,
-    amounts:[
-      {
-        value:'藏青色',
-        checked:false,
-        image: '/libs/images/lanmaomin.png',
-      },
-      {
-        value:'麻灰色',
-        checked:false,
-        image: '/libs/images/baimaomin.png',
-      }
-      
-    ],
+    amounts,
     image: '/libs/images/lanmaomin.png',
     model:'',
     curIndex: 0,
     showrx: false,
     showtj: true,
-    carNum: 0
+    carNum: 0,
+    lists:[]
   },
 
   /**
@@ -136,10 +123,33 @@ Page({
         carNum
       })
     }
+    if(this.data.hide) {
+      this.setData({
+        hide: false
+      })
+    }
     wx.setStorage({
       key: 'carNum',
       data: this.data.carNum
     })
+    app.globalData.carNum = this.data.carNum;
+    console.log(app.globalData.carNum)
+    let list =[{
+      title: '带帽日式多功能颈枕',
+      price: '¥89.00',
+      model: this.data.model,
+      num: this.data.carNum,
+      image: 'https://zll18314831310.github.io/wxapp_wangyiyanxuan/img/maozi2.png'
+    }]
+    this.setData({
+      lists: list
+    })
+    wx.setStorage({
+      key: 'lists',
+      data: this.data.lists
+    })
+    console.log(this.data.lists)
+    
   },
 
   switchCategory(e) {
@@ -259,7 +269,17 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-  
+    wx.getStorage({
+      key: 'carNum',
+      success: (res)=>{
+        this.setData({
+          carNum: res.data
+        })
+        app.globalData.carNum = this.data.carNum;
+        // console.log(this.data.carNum)
+        // console.log(app.globalData.carNum)
+      }
+    })
   },
 
   /**

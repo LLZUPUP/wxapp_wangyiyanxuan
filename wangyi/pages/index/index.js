@@ -13,6 +13,15 @@ Page({
       url: '../search/seach',
     })
     
+  },
+  onShow: function () {
+    wx.getStorage({
+      key: 'carNum',
+      success: (res)=>{
+        app.globalData.carNum = res.data;
+        // console.log(app.globalData.carNum)
+      }
+    })
   }
   
 })
