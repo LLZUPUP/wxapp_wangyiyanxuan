@@ -28,3 +28,6 @@ page {
 .hide {
   display: none!important;
 }
+button[disabled] {
+  background-color: #ccc!important;
+}

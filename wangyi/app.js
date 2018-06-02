@@ -32,12 +32,27 @@ App({
         }
       }
     })
+    wx.getStorage({
+      key: 'carNum',
+      success: (res)=>{
+        this.globalData.carNum = res.data;
+      },
+      
+    })
+    // wx.getStorage({
+    //   key: 'lists',
+    //   success: (res)=>{
+    //     this.globalData.lists = res.data;
+    //   }
+    // })
+    
     
   },
   
   globalData: {
     userInfo: null,
-    carNum: null
+    carNum: null,
+    // lists:[]
   },
   
 

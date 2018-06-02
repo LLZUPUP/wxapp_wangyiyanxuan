@@ -133,17 +133,26 @@ Page({
       data: this.data.carNum
     })
     app.globalData.carNum = this.data.carNum;
-    console.log(app.globalData.carNum)
-    let list =[{
+    num+=num;
+    let temp ={
       title: '带帽日式多功能颈枕',
-      price: '¥89.00',
+      price: '89.00',
       model: this.data.model,
-      num: this.data.carNum,
-      image: 'https://zll18314831310.github.io/wxapp_wangyiyanxuan/img/maozi2.png'
-    }]
-    this.setData({
-      lists: list
-    })
+      num: this.data.num,
+      image: 'https://zll18314831310.github.io/wxapp_wangyiyanxuan/img/maozi2.png',
+      selected: true,
+      hasCarNum: this.data.carNum
+    }
+    if(this.data.model) {
+      const list = [
+        temp,
+        ...this.data.lists
+      ]
+      this.setData({
+        lists: list
+      })
+    }
+    
     wx.setStorage({
       key: 'lists',
       data: this.data.lists
@@ -279,6 +288,15 @@ Page({
         // console.log(this.data.carNum)
         // console.log(app.globalData.carNum)
       }
+    })
+    wx.getStorage({
+      key: 'lists',
+      success: (res)=>{
+        this.setData({
+          lists: res.data
+        })
+      },
+      
     })
   },
 

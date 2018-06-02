@@ -12,14 +12,19 @@
     margin-top: 50rpx;
     
 }
+
+/* hd */
+.box {
+    height: 100%;
+    background-color: #f4f4f4;
+}
 .buycar {
-    height: 100vh;
     background-color: #f4f4f4;
     position: relative;
+    margin-bottom: 140rpx;
 }
-/* hd */
 .car_hd {
-    line-height: 88rpx;
+    line-height: 44rpx;
     display: flex;
     justify-content: space-between;
     padding: 20rpx 66rpx;
@@ -46,25 +51,112 @@
     height: 208rpx;
     background-color: #fff;
     border-bottom: 1rpx solid #f4f4f4;
+    box-sizing: border-box;
+    display: flex;
 }
-
-
-
-
-
+.car_bd .icon {
+    width: 102rpx;
+    height: 100%;
+    line-height: 206rpx;
+    text-align: center;
+}
+.car_bd .icon_select {
+    width: 100%;
+    height: 100%;
+}
+.car_bd .right {
+    padding-right: 30rpx;
+    position: relative;
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+.car_bd .right image {
+    height: 160rpx;
+    width: 160rpx;
+}
+.info {
+    font-size: 10pt;
+    line-height: 100%;
+    flex: 1;
+    box-sizing: border-box;
+    padding-left: 20rpx;
+}
+.info .info_title {
+    padding-bottom: 10rpx;
+    width: 200rpx;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.info .info_model {
+    color: #666666;
+    padding-bottom: 75rpx;
+    font-size: 9pt;
+}
+.con {
+    position: absolute;
+    right: 30rpx;
+    bottom: 20rpx;
+    display: flex;
+}
 .drop,.add {
     display: inline-block;
-    width: 90rpx;
-    height: 66rpx;
+    width: 80rpx;
+    height: 50rpx;
     text-align: center;
-    line-height: 66rpx;
+    line-height: 50rpx;
     border: 1rpx solid #ccc;
 }
 .num {
     display: inline-block;
-    width: 129rpx;
-    line-height: 66rpx;
+    width: 70rpx;
+    line-height: 50rpx;
     text-align: center;
     border-top: 1rpx solid #ccc;
     border-bottom: 1rpx solid #ccc; 
 }
+
+.car_ft {
+    width: 100%;
+    height: 96rpx;
+    position: fixed;
+    bottom: 0;
+    z-index: 98;
+    display: flex;
+    box-sizing: border-box;
+    background-color: #fff;
+    border-top: 1rpx solid #ddd;
+}
+.ft_lf {
+    padding-left: 20rpx;
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+.ft_lf .icon_select {
+    margin-right: 20rpx;
+}
+.ft_lf .selectTxt {
+    flex: 1;
+}
+.ft_lf .totalPrice {
+    flex: 1;
+}
+.ft_bt {
+    width: 226rpx;
+    line-height: 96rpx;
+    text-align: center;
+}
+.ft_bt .buy {
+    width: 100%;
+    height: 100%;
+    background-color: #b4282d;
+    color: #ffffff;
+    border-radius: 0;
+}
+.ft_bt .buy:active {
+    background-color: #a22922;
+}
+
+
