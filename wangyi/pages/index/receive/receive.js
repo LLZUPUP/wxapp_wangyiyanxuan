@@ -120,6 +120,17 @@ Page({
       })
     }
   },
+  goCar(e) {
+    wx.switchTab({
+      url:"../../buycar/buycar",
+      success: (res)=> {
+        wx.setStorage({
+          key: 'carNum',
+          data: this.data.carNum
+        })
+      }
+    })
+  },
 
   addCar(e) {
     let num = this.data.num;
@@ -293,13 +304,7 @@ Page({
           carNum: res.data
         })
         app.globalData.carNum = this.data.carNum;
-        // console.log(this.data.carNum)
-        // console.log(app.globalData.carNum)
       }
-    })
-    wx.setStorage({
-      key: 'carNum',
-      data: this.data.carNum
     })
     wx.getStorage({
       key: 'lists',

@@ -13,7 +13,8 @@ Page({
     totalNum: 0,
     disabled: false,
     startX: 0,
-    startY: 0
+    startY: 0,
+    hasCarNum: true
   },
 
   /**
@@ -39,6 +40,18 @@ Page({
     wx.setStorage({
       key: 'carNum',
       data: totalNum
+    })
+  },
+  // 取得购物车数量数据函数
+  PutCarNum(e) {
+    wx.getStorage({
+      key: 'carNum',
+      success: (res)=>{
+        this.setData({
+          hasCarNum: res.data
+        })
+      },
+      
     })
   },
   //  总价计算函数封装
@@ -107,11 +120,19 @@ Page({
       lists: this.data.lists
     })
   },
-  del: function (e) {
+  del(e) {
+    let Allselected = this.data.Allselected;
+    let selectAllStatus = this.data.selectAllStatus;
     this.data.lists.splice(e.currentTarget.dataset.index, 1)
     this.setData({
-      lists: this.data.lists
+      lists: this.data.lists,
+      
     })
+    if(!this.data.lists.length) {
+      this.setData({
+        hasCarNum: 0,
+      })
+    }
     this.upLists();
     this.getTotalNum();
     this.getCarNum();
@@ -126,26 +147,27 @@ Page({
     const index = e.currentTarget.dataset.index;
     const select = lists[index].selected;
     lists[index].selected = !select;
-    for(let i=0;i<lists.length;i++) {
-      if(lists[i].selected==false) {
-        this.setData({
-          selectAllStatus: false,
-          
-        })
-      }else {
-        this.setData({
-          selectAllStatus: true,
-        })
-      }
-      
-    }
-    
     this.setData({
       lists,
       disabled: !disabled,
-      Allselected: !Allselected
+      Allselected: !Allselected,
+      selectAllStatus: !selectAllStatus
     })
+    for(let i=0;i<lists.length;i++) {
+      if(!lists[i].selected) {
+        this.setData({
+          selectAllStatus: false,
+          Allselected: false,
+        })
+      }
+    }
+    this.getTotalNum();
     this.getTotalPrice();
+    if(this.data.totalPrice==false) {
+      this.setData({
+        disabled: true
+      })
+    }
     
 
   },
@@ -208,7 +230,6 @@ Page({
   },
 
   onShow: function () {
-    // console.log(app.globalData.carNum)
     wx.getStorage({
       key: 'lists',
       success: (res)=>{
@@ -217,28 +238,18 @@ Page({
         })
       }
     })
-    
+
     if(this.data.lists.length) {
       this.setData({
-        selectAllStatus: true,
-        Allselected: true,
-        disabled: false
+        hasCarNum: true
       })
     }
+    this.PutCarNum();
     this.getTotalPrice();
-    let lists = this.data.lists;
-    let carNum = 0;
-    for(let i = 0;i<lists.length;i++) {
-      if(lists[i].selected) {
-        carNum += lists[i].hasCarNum;
-        
-        this.getTotalNum();
-      }
-    }
-    this.setData({
-      hasCarNum: carNum
-    })
+    this.getTotalNum();
+    
     console.log(this.data.hasCarNum)
+    console.log(app.globalData.carNum)
    
     
   },
@@ -249,21 +260,13 @@ Page({
       title: '购物车'
     })
     
-    
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-    wx.getStorage({
-      key: 'carNum',
-      success: (res)=>{
-        this.setData({
-          hasCarNum: res.data
-        })
-      },
-    })
+    
   },
 
   /**

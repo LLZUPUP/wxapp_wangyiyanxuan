@@ -6,11 +6,11 @@
         <navigator hover-class="none" url="">
             <image src="/libs/images/kefu.png"></image>
         </navigator>
-        <navigator class="car_img" hover-class="none" open-type="switchTab" url="../../buycar/buycar">
+        <view class="car_img" bindtap="goCar">
             <image src="/libs/images/buycar.png">
                 <text class="carNum {{carNum?'':'hide'}}">{{carNum}}</text>
             </image>
-        </navigator>
+        </view>
         
         <view class="navbuy" bindtap="goBuy">立即购买</view>
         <view class="addcar" bindtap="addCar">加入购物车</view>

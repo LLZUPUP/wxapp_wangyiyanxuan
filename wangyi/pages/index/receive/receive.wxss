@@ -32,7 +32,7 @@
     line-height: 30rpx;
     font-size: 0.5rem;
 }
-.foo_buycar navigator {
+.foo_buycar navigator,.car_img {
     height: 98rpx;
     width: 98rpx;
     line-height: 98rpx;
