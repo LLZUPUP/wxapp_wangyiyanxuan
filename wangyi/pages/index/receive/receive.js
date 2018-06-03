@@ -113,6 +113,13 @@ Page({
       title: '商品详情',
     })
   },
+  goBuy(e) {
+    if(this.data.hide) {
+      this.setData({
+        hide: false
+      })
+    }
+  },
 
   addCar(e) {
     let num = this.data.num;
@@ -132,7 +139,7 @@ Page({
       key: 'carNum',
       data: this.data.carNum
     })
-    app.globalData.carNum = this.data.carNum;
+    // app.globalData.carNum = this.data.carNum;
     num+=num;
     let temp ={
       title: '带帽日式多功能颈枕',
@@ -141,7 +148,8 @@ Page({
       num: this.data.num,
       image: 'https://zll18314831310.github.io/wxapp_wangyiyanxuan/img/maozi2.png',
       selected: true,
-      hasCarNum: this.data.carNum
+      hasCarNum: this.data.carNum,
+      isTouchMove: false
     }
     if(this.data.model) {
       const list = [
@@ -288,6 +296,10 @@ Page({
         // console.log(this.data.carNum)
         // console.log(app.globalData.carNum)
       }
+    })
+    wx.setStorage({
+      key: 'carNum',
+      data: this.data.carNum
     })
     wx.getStorage({
       key: 'lists',

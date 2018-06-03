@@ -12,7 +12,7 @@
             </image>
         </navigator>
         
-        <view class="navbuy">立即购买</view>
+        <view class="navbuy" bindtap="goBuy">立即购买</view>
         <view class="addcar" bindtap="addCar">加入购物车</view>
     </view>
     <swiper class="pdt_img" bindchange="changeSwiper" circular="true">

@@ -5,13 +5,15 @@ Page({
    * 页面的初始数据
    */
   data: {
-    hasCarNum: 0,
+    // hasCarNum: 0,
     lists: [],
     Allselected: true,
     totalPrice: false,
     selectAllStatus: true,
     totalNum: 0,
-    disabled: false
+    disabled: false,
+    startX: 0,
+    startY: 0
   },
 
   /**
@@ -23,6 +25,13 @@ Page({
       key: 'lists',
       data: this.data.lists
     })
+  },
+  // 计算手滑动角度函数
+  angle: function (start, end) {
+    var _X = end.X - start.X,
+      _Y = end.Y - start.Y
+    //返回角度 /Math.atan()返回数字的反正切值
+    return 360 * Math.atan(_Y / _X) / (2 * Math.PI);
   },
   // 存储购物车数量数据函数
   getCarNum(e) {
@@ -55,14 +64,65 @@ Page({
       }
     }
     this.setData({
-      totalNum: total
+      totalNum: total,
     })
+  },
+  touchstart(e) {
+    //开始触摸时 重置所有删除
+    this.data.lists.forEach(function (v, i) {
+      if (v.isTouchMove)//只操作为true的
+        v.isTouchMove = false;
+    })
+    // console.log(e.changedTouches[0].clientX)
+    // console.log(e.changedTouches[0].clientY)
+    // console.log(e)
+    this.setData({
+      startX: e.touches[0].clientX,
+      startY: e.touches[0].clientY,
+      lists: this.data.lists
+    })
+  },
+  //滑动事件处理
+  touchmove(e) {
+      let index = e.currentTarget.dataset.index;//当前索引
+      let startX = this.data.startX;//开始X坐标
+      let startY = this.data.startY;//开始Y坐标
+      let touchMoveX = e.touches[0].clientX;//滑动变化坐标
+      let touchMoveY = e.touches[0].clientY;//滑动变化坐标
+      //获取滑动角度
+      let angle = this.angle({ X: startX, Y: startY }, { X: touchMoveX, Y: touchMoveY });
+    this.data.lists.forEach((v, i)=> {
+      v.isTouchMove = false
+      //滑动超过30度角 return
+      if (Math.abs(angle) > 30) return;
+      if (i == index) {
+        if (touchMoveX > startX) //右滑
+          v.isTouchMove = false
+        else //左滑
+          v.isTouchMove = true
+      }
+    })
+    //更新数据
+    this.setData({
+      lists: this.data.lists
+    })
+  },
+  del: function (e) {
+    this.data.lists.splice(e.currentTarget.dataset.index, 1)
+    this.setData({
+      lists: this.data.lists
+    })
+    this.upLists();
+    this.getTotalNum();
+    this.getCarNum();
+    this.getTotalPrice();
   },
   iconSelect(e) {
     console.log(e)
     let lists = this.data.lists;
     let disabled = this.data.disabled;
     let selectAllStatus = this.data.selectAllStatus;
+    let Allselected = this.data.Allselected;
     const index = e.currentTarget.dataset.index;
     const select = lists[index].selected;
     lists[index].selected = !select;
@@ -70,21 +130,23 @@ Page({
       if(lists[i].selected==false) {
         this.setData({
           selectAllStatus: false,
-          Allselected: false,
+          
         })
       }else {
         this.setData({
-          selectAllStatus: true
+          selectAllStatus: true,
         })
       }
+      
     }
+    
     this.setData({
       lists,
-      disabled
+      disabled: !disabled,
+      Allselected: !Allselected
     })
-    console.log(this.data.selected)
     this.getTotalPrice();
-
+    
 
   },
   selectAll(e) {
@@ -105,6 +167,7 @@ Page({
       lists
     })
     this.getTotalPrice();
+    this.getTotalNum();
   },
   dropNum(e) {
     const index =e.currentTarget.dataset.index;
@@ -141,6 +204,7 @@ Page({
     this.getTotalNum();
     this.getCarNum();
     this.upLists();
+    
   },
 
   onShow: function () {
@@ -149,17 +213,32 @@ Page({
       key: 'lists',
       success: (res)=>{
         this.setData({
-          lists: res.data
+          lists: res.data,
         })
       }
     })
+    
+    if(this.data.lists.length) {
+      this.setData({
+        selectAllStatus: true,
+        Allselected: true,
+        disabled: false
+      })
+    }
     this.getTotalPrice();
+    let lists = this.data.lists;
+    let carNum = 0;
+    for(let i = 0;i<lists.length;i++) {
+      if(lists[i].selected) {
+        carNum += lists[i].hasCarNum;
+        
+        this.getTotalNum();
+      }
+    }
     this.setData({
-      hasCarNum: app.globalData.carNum
+      hasCarNum: carNum
     })
     console.log(this.data.hasCarNum)
-    this.getTotalNum();
-    console.log(this.data.totalNum)
    
     
   },
@@ -169,16 +248,7 @@ Page({
     wx.setNavigationBarTitle({
       title: '购物车'
     })
-    wx.getStorage({
-      key: 'lists',
-      success: (res)=>{
-        this.setData({
-          lists: res.data
-        })
-      }
-    })
-    this.getTotalNum();
-    this.getTotalPrice();
+    
     
   },
 
@@ -186,7 +256,14 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-    
+    wx.getStorage({
+      key: 'carNum',
+      success: (res)=>{
+        this.setData({
+          hasCarNum: res.data
+        })
+      },
+    })
   },
 
   /**

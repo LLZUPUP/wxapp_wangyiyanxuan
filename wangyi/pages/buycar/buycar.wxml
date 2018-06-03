@@ -5,35 +5,42 @@
             <text>48小时快速退款</text>
             <text>满88元免邮费</text>
         </view>
-        <view class="car_bd" wx:for="{{lists}}" wx:key="{{index}}" wx:if="{{hasCarNum}}">
-            <view class="icon" >
-                <icon wx:if="{{item.selected}}" bindtap="iconSelect" class="icon_select" type="success" color="blue" size="20" data-index="{{index}}"></icon>
-                <icon wx:else class="icon_select" bindtap="iconSelect" type="circle" color="blue" size="20" data-index="{{index}}"></icon>
-            </view>
-            <view class="right" >
-                <navigator hover-class="none" url="/pages/index/receive/receive">
-                    <image src="{{item.image}}"></image>
-                </navigator>
-                <view class="info">
-                    <view class="info_title">{{item.title}}</view>
-                    <view class="info_model">{{item.model}}</view>
-                    <view class="info_price">¥{{item.price}}</view>
+        <view class="car_bd {{item.isTouchMove ? 'touch-move-active' : ''}}" data-index="{{index}}" bindtouchstart="touchstart" bindtouchmove="touchmove" wx:for="{{lists}}" wx:key="{{index}}" wx:if="{{hasCarNum}}">
+            <view class="content">
+                <view class="icon" >
+                    <icon wx:if="{{item.selected}}" bindtap="iconSelect" class="icon_select" type="success" color="blue" size="20" data-index="{{index}}"></icon>
+                    <icon wx:else class="icon_select" bindtap="iconSelect" type="circle" color="blue" size="20" data-index="{{index}}"></icon>
                 </view>
-                <view class="con">
-                    <view class="drop" data-index="{{index}}" bindtap="dropNum">-</view>
-                    <view class="num">{{item.num}}</view>
-                    <view class="add" data-index="{{index}}" bindtap="addNum">+</view>
+                <view class="right" >
+                    <navigator hover-class="none" url="/pages/index/receive/receive">
+                        <image src="{{item.image}}"></image>
+                    </navigator>
+                    <view class="info">
+                        <view class="info_title">{{item.title}}</view>
+                        <view class="info_model">{{item.model}}</view>
+                        <view class="info_price">¥{{item.price}}</view>
+                    </view>
+                    <view class="con">
+                        <view class="drop" data-index="{{index}}" bindtap="dropNum">-</view>
+                        <view class="num">{{item.num}}</view>
+                        <view class="add" data-index="{{index}}" bindtap="addNum">+</view>
+                    </view>
                 </view>
             </view>
+            <view class="del" catchtap="del" data-index="{{index}}">删除</view>
         </view>
     </view>
     <view class="car_ft">
         <view class="ft_lf">
             <icon wx:if="{{selectAllStatus}}" bindtap="selectAll" class="icon_select" type="success" color="blue" size="20" data-index="{{index}}"></icon>
             <icon wx:else class="icon_select" bindtap="selectAll" type="circle" color="blue" size="20" data-index="{{index}}"></icon>
-            <text wx:if="{{Allselected}}" class="selectTxt">已选({{totalNum}})</text>
+            <view class="selectTxt" wx:if="{{Allselected}}">
+                <text  class="selectTxt_lt">已选({{totalNum}})</text>
+            </view>
             <text wx:else>全选</text>
-            <text class="totalPrice">¥{{totalPrice?totalPrice:'0.00'}}</text>
+            <view class="totalPrice">
+                <text class="totalPrice_rt">¥{{totalPrice?totalPrice:'0.00'}}</text>
+            </view>
         </view>
         <view class="ft_bt">
             <button class="buy" disabled="{{disabled}}">下单</button>

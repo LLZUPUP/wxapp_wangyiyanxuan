@@ -53,7 +53,37 @@
     border-bottom: 1rpx solid #f4f4f4;
     box-sizing: border-box;
     display: flex;
+    justify-content: space-between;
+    overflow: hidden;
 }
+.content {
+    width: 100%;
+    margin-right:0;
+    -webkit-transition: all 0.4s;
+    transition: all 0.4s;
+    -webkit-transform: translateX(90px);
+    transform: translateX(90px);
+    margin-left: -90px;
+    display: flex;
+   }
+.del {
+    background-color: orangered;
+    width: 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    -webkit-transform: translateX(90px);
+    transform: translateX(90px);
+    -webkit-transition: all 0.4s;
+    transition: all 0.4s;
+    }
+.touch-move-active .content,
+.touch-move-active .del {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    }
 .car_bd .icon {
     width: 102rpx;
     height: 100%;
@@ -140,8 +170,14 @@
 .ft_lf .selectTxt {
     flex: 1;
 }
+.ft_lf .selectTxt_lt {
+    float: left;
+}
 .ft_lf .totalPrice {
     flex: 1;
+}
+.ft_lf .totalPrice_rt {
+    float: right;
 }
 .ft_bt {
     width: 226rpx;
