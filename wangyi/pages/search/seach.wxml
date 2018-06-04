@@ -2,14 +2,10 @@
     <view class="addForm-div">
         <input type="text" class="search" placeholder="请输入" bindinput="getSearch" value="{{searchText}}" focus="true"/>
         <text class="empty" catchtap="cancelSearch"> {{searchText?'搜索':'取消'}}</text>
-        <view class="cancel">
-          <icon wx:if="{{searchText}}" type="clear" size="20" bindtap="cancelText"></icon>
-        </view>
     </view>
     <view class="result">
         <block wx:for="{{lists}}" wx:key="{{index}}" >
             <view class="product" bindtap="goPdt">{{item}}</view>
         </block>
     </view>
-    
 </view>

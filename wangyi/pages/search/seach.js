@@ -46,12 +46,6 @@ Page({
     })
     console.log(lists)
   },
-  cancelText(e) {
-    this.setData({
-      searchText: '',
-      lists: []
-    })
-  },
   goPdt(e) {
     wx.redirectTo({
       url: "/pages/index/receive/receive"
@@ -62,6 +56,11 @@ Page({
     if(this.data.searchText=='') {
       wx.navigateBack({
         delta: 1, // 回退前 delta(默认为1) 页面
+      })
+    }else {
+      wx.showToast({
+        title: '功能后续完善',
+        icon: 'none'
       })
     }
   }

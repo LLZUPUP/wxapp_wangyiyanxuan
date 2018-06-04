@@ -11,6 +11,12 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
+  unFinished(e) {
+    wx.showToast({
+      title: '功能未完善',
+      icon: 'none'
+    })
+  },
   buyAfter(e) {
     this.setData({
       active: true

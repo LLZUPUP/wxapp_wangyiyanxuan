@@ -19,7 +19,7 @@
   .cancel {
     position: absolute;
     right: 110rpx;
-    top: 10rpx;
+    top: 4rpx;
     z-index:99;
   }
   .empty {
