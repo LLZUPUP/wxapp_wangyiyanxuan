@@ -47,3 +47,11 @@
     color: #2e2e2e;
     font-size: 0.8rem;
 }
+.actionsheet {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0,0,0,.4);
+}

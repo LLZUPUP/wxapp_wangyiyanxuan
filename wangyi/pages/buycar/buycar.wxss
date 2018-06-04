@@ -67,7 +67,7 @@
     display: flex;
    }
 .del {
-    background-color: orangered;
+    background-color: #b4282d;
     width: 90px;
     display: flex;
     flex-direction: column;

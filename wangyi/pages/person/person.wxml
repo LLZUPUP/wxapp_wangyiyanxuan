@@ -1,71 +1,76 @@
-<view class="weui-cells head">
-  <view class="head_container">
-      <!-- <view class="weui-cell__hd "> -->
-        <open-data type="userAvatarUrl" class="userimage" lang="en"></open-data>
-      <!-- </view> -->
-      <view class="weui-cell__bd username">
-        <open-data type="userNickName" ></open-data>
-        <view class="stu_id">微信用户</view>
-      </view>
-  </view>
-  </view>
+<view class="container">
+  <view class="weui-cells head">
+    <view class="head_container">
+        <!-- <view class="weui-cell__hd "> -->
+          <open-data type="userAvatarUrl" class="userimage" lang="en"></open-data>
+        <!-- </view> -->
+        <view class="weui-cell__bd username">
+          <open-data type="userNickName" ></open-data>
+          <view class="stu_id">微信用户</view>
+        </view>
+    </view>
+    </view>
   <view class="weui-cells" >
-    <navigator class="weui-cell weui-cell_access" hover-class="weui-cell_active" url="">
-      <view class="weui-cell__hd">
-        <image src="/libs/images/dingdan.png"/>
+      <navigator class="weui-cell weui-cell_access" hover-class="weui-cell_active" url="">
+        <view class="weui-cell__hd">
+          <image src="/libs/images/dingdan.png"/>
+        </view>
+        <view class="weui-cell__bd text">我的订单</view>
+        <view class="weui-cell__ft  weui-cell__ft_in-access"></view>
+      </navigator>
+      <navigator class="weui-cell weui-cell_access" hover-class="weui-cell_active" 
+      url="">
+        <view class="weui-cell__hd">
+          <image src="/libs/images/jifen.png"/>
+        </view>
+        <view class="weui-cell__bd text">我的积分</view>
+        <view class="weui-cell__ft  weui-cell__ft_in-access"></view>
+      </navigator>
+      <view class="weui-cell weui-cell_access " hover-class="weui-cell_active" bindtap="buyAfter">
+        <view class="weui-cell__hd">
+          <image src="/libs/images/shouhou.png" />
+        </view>
+        <view class="weui-cell__bd text">退货/售后</view>
+        <view class="weui-cell__ft  weui-cell__ft_in-access"></view>
       </view>
-      <view class="weui-cell__bd text">我的订单</view>
-      <view class="weui-cell__ft  weui-cell__ft_in-access"></view>
+      <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+        <view class="weui-cell__hd">
+            <image src="/libs/images/youhuiquan.png" />
+        </view>
+        <view class="weui-cell__bd text">优惠券</view>
+        <view class="weui-cell__ft  weui-cell__ft_in-access"></view>
+      </navigator>
+      <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+        <view class="weui-cell__hd">
+            <image src="/libs/images/hongbao.png" />
+        </view>
+        <view class="weui-cell__bd text">红包</view>
+        <view class="weui-cell__ft  weui-cell__ft_in-access"></view>
     </navigator>
-    <navigator class="weui-cell weui-cell_access" hover-class="weui-cell_active" 
-    url="">
+    <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
       <view class="weui-cell__hd">
-        <image src="/libs/images/jifen.png"/>
+          <image src="/libs/images/dizhi.png" />
       </view>
-      <view class="weui-cell__bd text">我的积分</view>
+      <view class="weui-cell__bd text">地址管理</view>
       <view class="weui-cell__ft  weui-cell__ft_in-access"></view>
     </navigator>
     <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
       <view class="weui-cell__hd">
-        <image src="/libs/images/shouhou.png" />
+        <image src="/libs/images/kefu.png" />
       </view>
-      <view class="weui-cell__bd text">退货/售后</view>
+      <view class="weui-cell__bd text">联系客服</view>
       <view class="weui-cell__ft  weui-cell__ft_in-access"></view>
     </navigator>
     <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
       <view class="weui-cell__hd">
-          <image src="/libs/images/youhuiquan.png" />
+        <image src="/libs/images/help.png" />
       </view>
-      <view class="weui-cell__bd text">优惠券</view>
+      <view class="weui-cell__bd text">帮助中心</view>
       <view class="weui-cell__ft  weui-cell__ft_in-access"></view>
     </navigator>
-    <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
-      <view class="weui-cell__hd">
-          <image src="/libs/images/hongbao.png" />
-      </view>
-      <view class="weui-cell__bd text">红包</view>
-      <view class="weui-cell__ft  weui-cell__ft_in-access"></view>
-  </navigator>
-  <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
-    <view class="weui-cell__hd">
-        <image src="/libs/images/dizhi.png" />
-    </view>
-    <view class="weui-cell__bd text">地址管理</view>
-    <view class="weui-cell__ft  weui-cell__ft_in-access"></view>
-  </navigator>
-  <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
-    <view class="weui-cell__hd">
-      <image src="/libs/images/kefu.png" />
-    </view>
-    <view class="weui-cell__bd text">联系客服</view>
-    <view class="weui-cell__ft  weui-cell__ft_in-access"></view>
-  </navigator>
-  <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
-    <view class="weui-cell__hd">
-      <image src="/libs/images/help.png" />
-    </view>
-    <view class="weui-cell__bd text">帮助中心</view>
-    <view class="weui-cell__ft  weui-cell__ft_in-access"></view>
-  </navigator>
+  </view>
+  <view class="actionsheet {{active?'':'hide'}}"></view>
 </view>
+
+
   

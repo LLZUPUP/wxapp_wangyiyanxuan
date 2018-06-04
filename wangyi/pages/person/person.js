@@ -5,12 +5,30 @@ Page({
    * 页面的初始数据
    */
   data: {
-  
+    active: false
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
+  buyAfter(e) {
+    this.setData({
+      active: true
+    })
+    wx.showModal({
+      content: '请在严选APP内申请售后服务',
+      showCancel: false,
+      confirmColor: '#ff0000',
+      success: (res)=>{
+        if(res.confirm){
+          this.setData({
+            active: false
+          })
+        }
+        
+      }
+    })
+  },
   onLoad: function (options) {
     wx.setNavigationBarTitle({
       title: '个人中心'
