@@ -43,7 +43,7 @@
             </view>
         </view>
         <view class="ft_bt">
-            <button class="buy" disabled="{{disabled}}">下单</button>
+            <button class="buy" disabled="{{disabled}}" bindtap="purchase">下单</button>
         </view>
     </view>
 </view>

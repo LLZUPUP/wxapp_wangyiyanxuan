@@ -2,11 +2,13 @@
     <view class="addForm-div">
         <input type="text" class="search" placeholder="请输入" bindinput="getSearch" value="{{searchText}}" focus/>
         <text class="empty" catchtap="cancelSearch"> {{searchText?'搜索':'取消'}}</text>
-        <image wx:if="{{searchText}}" src="/libs/images/cancel.png" class="cancel" catchtap="cancelText"></image>
+        <view class="cancel" wx:if="{{searchText}}">
+        <image  src="/libs/images/cancel.png"  catchtap="cancelText"></image>
+        </view>
     </view>
     <view class="result">
         <block wx:for="{{lists}}" wx:key="{{index}}" >
-            <view class="product">{{item}}</view>
+            <view class="product" bindtap="goPdt">{{item}}</view>
         </block>
     </view>
     

@@ -1,12 +1,11 @@
 {
   "pages": [
-    "pages/search/seach",
+    "pages/index/index",
+    "pages/kinds/kinds",
     "pages/buycar/buycar",
     "pages/person/person",
-    "pages/index/index",
+    "pages/search/seach",
     "pages/index/receive/receive",
-    "pages/kinds/kinds",
-    
     "pages/product/product"
   ],
   "window": {

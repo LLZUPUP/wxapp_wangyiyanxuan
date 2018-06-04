@@ -114,11 +114,21 @@ Page({
     })
   },
   goBuy(e) {
-    if(this.data.hide) {
+    if (this.data.hide) {
       this.setData({
-        hide: false
+        hide: false,
       })
     }
+    if (this.data.model) {
+      wx.showToast({
+        title: '购买成功',
+      })
+      this.setData({
+        hide: true,
+      })
+    }
+    
+   
   },
   goCar(e) {
     wx.switchTab({

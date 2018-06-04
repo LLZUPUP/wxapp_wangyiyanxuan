@@ -48,7 +48,13 @@ Page({
   },
   cancelText(e) {
     this.setData({
-      searchText: ''
+      searchText: '',
+      lists: []
+    })
+  },
+  goPdt(e) {
+    wx.redirectTo({
+      url: "/pages/index/receive/receive"
     })
   },
 

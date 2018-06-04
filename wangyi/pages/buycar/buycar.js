@@ -14,7 +14,7 @@ Page({
     disabled: false,
     startX: 0,
     startY: 0,
-    hasCarNum: true
+    hasCarNum: false
   },
 
   /**
@@ -149,7 +149,6 @@ Page({
     lists[index].selected = !select;
     this.setData({
       lists,
-      disabled: !disabled,
       Allselected: !Allselected,
       selectAllStatus: !selectAllStatus
     })
@@ -167,6 +166,10 @@ Page({
       this.setData({
         disabled: true
       })
+    }else {
+      this.setData({
+        disabled: false
+      })
     }
     
 
@@ -178,14 +181,21 @@ Page({
     let lists = this.data.lists;
     selectAllStatus = !selectAllStatus;
     Allselected = !Allselected;
-    disabled = !disabled;
     for(let i=0;i<lists.length;i++) {
       lists[i].selected = selectAllStatus;
+    }
+    if(selectAllStatus==true) {
+      this.setData({
+        disabled: false
+      })
+    }else {
+      this.setData({
+        disabled: true
+      })
     }
     this.setData({
       selectAllStatus,
       Allselected,
-      disabled,
       lists
     })
     this.getTotalPrice();
@@ -253,7 +263,11 @@ Page({
    
     
   },
-
+  purchase(e){
+    wx.showToast({
+      title: '购买成功',
+    })
+  },
 
   onLoad: function (options) {
     wx.setNavigationBarTitle({
