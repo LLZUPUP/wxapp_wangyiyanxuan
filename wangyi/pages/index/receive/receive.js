@@ -150,6 +150,10 @@ Page({
       this.setData({
         carNum
       })
+      wx.showToast({
+        title: '加入购物车成功',
+        icon: 'none'
+      })
     }
     if(this.data.hide) {
       this.setData({
@@ -187,6 +191,7 @@ Page({
       data: this.data.lists
     })
     console.log(this.data.lists)
+   
     
   },
 
