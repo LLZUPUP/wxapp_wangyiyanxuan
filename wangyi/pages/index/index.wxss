@@ -1,4 +1,17 @@
 .inputSearch {
+  /* position: absolute;
+  left: 30rpx;
+  top: 10rpx;
+  box-sizing: border-box;
+  width: 690rpx;
+  height: 56rpx;
+  border-radius: 45rpx;
+   z-index: 2;    
+  border: 1rpx solid #000;
+  background-color: #fff;
+  box-shadow: 0 0 1rpx #ccc; */
+}
+.input {
   position: absolute;
   left: 30rpx;
   top: 10rpx;
@@ -6,11 +19,10 @@
   width: 690rpx;
   height: 56rpx;
   border-radius: 45rpx;
-  z-index: 2;  
+   /* z-index: 2;     */
+  border: 1rpx solid #000;
   background-color: #fff;
   box-shadow: 0 0 1rpx #ccc;
-}
-.input {
   text-indent: 185rpx;
   font-size: 0.8rem;
   

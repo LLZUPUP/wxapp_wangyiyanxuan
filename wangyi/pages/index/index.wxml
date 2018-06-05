@@ -1,8 +1,8 @@
 <view class="container">
    <view class="hd"> 
-      <view class="inputSearch">
+      <!-- <view class="inputSearch"> -->
         <input  class="input" placeholder="搜索商品，共9803款好物" bindtap="entrySearch" disabled />
-      </view>
+      <!-- </view> -->
       <swiper class="receive">
         <swiper-item >
           <navigator url="/pages/index/receive/receive" hover-class="none">
