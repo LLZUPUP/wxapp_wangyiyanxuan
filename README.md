@@ -20,6 +20,4 @@
 ### 购物车
 ![](https://user-gold-cdn.xitu.io/2018/6/5/163d0843727b68ab?w=405&h=720&f=gif&s=2439857)
 
-test
-
 
