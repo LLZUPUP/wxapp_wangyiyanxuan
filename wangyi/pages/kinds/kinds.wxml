@@ -4,7 +4,6 @@
             <text>{{item.name}}</text>
         </view>
     </scroll-view>  
-     
      <swiper vertical="true" class="menu-right" current="{{toView}}" >
         <swiper-item wx:for="{{detail}}" wx:key="{{item.id}}">
             <scroll-view class="cate-box" id="{{item.id}}" scroll-y>
@@ -25,6 +24,4 @@
             </scroll-view>
         </swiper-item>
     </swiper> 
-
-    
 </view>

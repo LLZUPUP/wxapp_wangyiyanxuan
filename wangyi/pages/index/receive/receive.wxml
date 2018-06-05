@@ -1,6 +1,9 @@
 <view class="container">
     <view class="foo_buycar">
-        <navigator hover-class="none" open-type="switchTab" url="/pages/index/index">
+        <!-- <navigator hover-class="none" open-type="switchTab" url="/pages/index/index">
+            <image src="/libs/images/home.png"></image>
+        </navigator> -->
+        <navigator hover-class="none"  url="/pages/index/index">
             <image src="/libs/images/home.png"></image>
         </navigator>
         <navigator hover-class="none" url="">
