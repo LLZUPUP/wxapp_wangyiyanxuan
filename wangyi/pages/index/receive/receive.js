@@ -99,7 +99,6 @@ Page({
     image: '/libs/images/lanmaomin.png',
     model:'',
     curIndex: 0,
-    showrx: false,
     showtj: true,
     carNum: 0,
     lists:[]
@@ -200,12 +199,10 @@ Page({
     let index = e.currentTarget.dataset.index;
     if(index==0) {
       this.setData({
-        showrx: false,
         showtj: true  
       })
     }else {
       this.setData({
-        showrx: true,
         showtj: false 
       })
     }

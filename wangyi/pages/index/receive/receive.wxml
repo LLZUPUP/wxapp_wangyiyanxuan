@@ -69,7 +69,7 @@
                 </navigator>
             </block>
         </scroll-view>
-        <scroll-view wx:if="{{showrx}}" class="cate_box" scroll-x scroll-with-animation="true">
+        <scroll-view wx:else class="cate_box" scroll-x scroll-with-animation="true">
             <block wx:for="{{rexiao}}" wx:key="{{index}}">
                 <navigator class="tuijian" hover-class="none" url="/pages/index/receive/receive">
                         <image class="tj_img" src="{{item.banner}}"></image>
