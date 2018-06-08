@@ -1,3 +1,6 @@
+.container {
+  background-color: #fff;
+}
 .weui-cell__hd image {
     width: 50rpx;
     height: 50rpx;
